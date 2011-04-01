@@ -1,0 +1,1 @@
+{% load i18n %}{% load account_tags %}{% user_display message.recipient as recipient_display %}{% blocktrans %}You have sent the message '{{ message }}' to {{ recipient_display }}.{% endblocktrans %}

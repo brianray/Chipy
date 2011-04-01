@@ -1,0 +1,77 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load ifsetting_tag %}
+{% load meetings_extra %}
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body %}
+
+
+
+    
+    <h1>{% trans "Welcome to ChiPy" %}</h1>
+    
+
+   
+<p>
+
+	Welcome to the ChiPy website!  There is a <a href="http://mail.python.org/mailman/listinfo/chicago" class="reference">mailing list</a>. Check out our current <a href="/tribes/tribe/members/" class="reference">members</a> list.
+Some of us like to hang out in the IRC <a href="irc://irc.freenode.net/chipy" class="reference">#chipy</a> channel on irc.freenode.net.</p>
+</p>
+
+<p>
+	Meetings happen in the downtown area (Loop) the second Thursday every month and in the Northern Suburbs every other month on the Third Thursday.
+
+</p>
+
+ 
+    {% if user.is_authenticated %}
+        {% url what_next as what_next_url %}
+        <p >You are logged in! <a href="{{ what_next_url }}">Start Here</a>?</p>
+    {% else %}
+        {% url acct_login as login_url %}
+        {% ifsetting ACCOUNT_OPEN_SIGNUP %}
+            {% url acct_signup as signup_url %}
+            <p>You can <a href="{{ signup_url }}">Sign up</a> and <a href="{{ login_url }}">Log in</a> to try out the site.</p>
+        {% else %}
+            <p>You can <a href="{{ login_url }}">Log in</a> to try out the site.</p>
+        {% endifsetting %}
+    {% endif %}
+    
+    </p>
+   
+
+
+
+    <h1>Next Meetings</h1>
+    
+
+    <p>
+     {% get_future_meeting 0 1 "We are still working out the details for the next ChiPy meeting." %}
+
+    </p>
+   
+
+    <p>Check out some of our previous meetings for videos, links and more <a href="{% url past_meetings %}">Past Meetings</a></p>
+
+
+    <h1>About</h1>
+
+
+<p>
+Note that ChiPy is not a formal organization. We collect no dues, elect no officers, and keep no roster. Signing up for the mailing list carries no obligation. Nor does showing up at the meetings. Nor, at least so far, does anything else we have done, although we always appreciate it when our presenters show up. (They usually do!)
+</p>
+
+<p>
+ChiPy is made up of people of all levels of programming and Python knowledge. At every meeting we have had both beginning programmers, people who are just starting to use Python, as well as experienced Python programmers. Don't be intimidated about coming to a meeting.
+</p>
+
+
+
+
+
+
+{% endblock %}

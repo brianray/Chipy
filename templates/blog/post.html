@@ -1,0 +1,40 @@
+{% extends "blog/base.html" %}
+
+{% load i18n %}
+{% load humanize %}
+{% load account_tags %}
+{% load comments_tag %}
+{% load tagging_tags %}
+{% load blog_tags %}
+{% load theme_tags %}
+
+{% block head_title %}{% blocktrans %}Blog Post{% endblocktrans %} : {{ post.title }}{% endblock %}
+
+{% block extra_head %}
+    <link rel="alternate" type="application/atom+xml" title="Blog Post Feed for All Users" href="/feeds/posts/all/" />
+    <link rel="alternate" type="application/atom+xml" title="Blog Post Feed for User {{ post.author.username }}" href="/feeds/posts/only/{{ post.author.username }}/" />
+{% endblock %}
+
+{% block body %}
+    
+    <div class="blog-post">
+        <h2>{{ post.title }}</h2>
+        <div class="blog-meta"><p>Posted by: <a href="{% url profile_detail post.author.username %}">{% user_display post.author %}</a> on {{ post.publish|date }}</p></div>
+        <div class="blog-tags">
+            <p>{% silk "tag_blue" %}
+            {% tags_for_object post as tags %}
+            {% for tag in tags %}
+                <a href="/tags/{{ tag }}">{{ tag }}</a>
+            {% endfor %}</p>
+            {% ifequal post.author request.user %}
+                <a href="{% url blog_edit post.id %}">Edit Post</a>
+            {% endifequal %}
+        </div>
+        
+        {% show_blog_post post %}
+        
+    </div>
+    
+    <h3>Comments on This Post:</h3>
+    {% comments post %}
+{% endblock %}

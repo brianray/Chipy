@@ -1,0 +1,9 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Not Found" %}{% endblock %}
+
+{% block body %}
+    <p>{% trans "We're sorry but that page could not be found." %} Try looking on our old site <a href="http://old.chipy.org">here</a> or add "old.chipy.org" in the url</p>
+{% endblock %}

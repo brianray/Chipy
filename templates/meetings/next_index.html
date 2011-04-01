@@ -1,0 +1,34 @@
+
+{% extends "site_base.html" %}
+
+
+{% block extra_head %}
+<!-- this section is the only one needed to run Shadowbox -->
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}shadowbox-3.0.3/shadowbox.css">
+<script type="text/javascript" src="{{STATIC_URL}}shadowbox-3.0.3/shadowbox.js"></script>
+<script type="text/javascript">
+  Shadowbox.init();
+</script>
+
+{% endblock %}
+
+
+
+{% load i18n %}
+{% load ifsetting_tag %}
+{% load meetings_extra %}
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body %}
+
+    
+    <h1>Next ChiPy Meeting</h1>
+
+    <p>
+     {% get_future_meeting 0 1 "We are still working out the details for the next ChiPy meeting." %}
+    </p>
+   
+{% endblock %}

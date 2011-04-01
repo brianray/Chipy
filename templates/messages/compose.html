@@ -1,0 +1,44 @@
+{% extends "messages/base.html" %}
+
+{% load i18n %}
+{% load uni_form_tags %}
+
+{% block body %}
+    <h1>{% trans "Compose Message"%}</h1>
+    
+    <form action="" method="post" class="uniForm">
+        {% csrf_token %}
+        <fieldset class="inlineLabels">
+            {{ form|as_uni_form }}
+            <div class="form_block">
+                <input type="submit" value="{% trans "Send" %} &raquo;"/>
+            </div>
+    </form>
+{% endblock %}
+
+{% block extra_body %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ STATIC_URL }}pinax/js/jquery.bgiframe.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}pinax/js/jquery.dimensions.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}pinax/js/jquery.ajaxQueue.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}pinax/js/jquery.autocomplete.min.js"></script>
+    <script type="text/javascript">
+        $().ready(function() {
+            $("#id_recipient").autocomplete("{% url profile_username_autocomplete %}", {
+                formatItem: function(data, i, n, value) {
+                    values = value.split(",,");
+                    return values[0] + values[1] + "<br />" + values[2];
+                },
+                formatResult: function(data, value) {
+                    return value.split(",,")[1];
+                },
+                // TODO: improve highlighting to only affect username.
+                highlight: false
+            });
+            $("#id_recipient").result(function() {
+                $("#id_subject").focus();
+            });
+            $("#id_recipient").focus()
+        });
+    </script>
+{% endblock %}

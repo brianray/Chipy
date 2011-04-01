@@ -1,0 +1,12 @@
+{% load i18n %}{% load account_tags %}{% user_display user as user_display %}{% blocktrans %}You have been invited by {{ user_display }} to join {{ SITE_NAME }}.
+
+{{ user_display }} said:
+
+{{ message }}
+
+To accept this invitation, go to
+
+{{ accept_url }}
+
+If you have any questions about {{ SITE_NAME }}, don't hesitate to contact {{ CONTACT_EMAIL }}
+{% endblocktrans %}

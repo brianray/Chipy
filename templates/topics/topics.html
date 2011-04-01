@@ -1,0 +1,47 @@
+{% extends "topics/base.html" %}
+
+{% load i18n %}
+{% load uni_form_tags %}
+{% load pagination_tags %}
+
+{% block head_title %}{% spaceless %}
+{% if group %}
+    {% blocktrans with group.name as group_name %}Discussion Topics for {{ group_name }}{% endblocktrans %}
+{% else %}
+    {% trans "Discussion Topics" %}
+{% endif %}
+{% endspaceless %}{% endblock %}
+
+{% block body %}
+    <h1>{% spaceless %}
+    {% if group %}
+        {% blocktrans with group.get_absolute_url as group_url and group.name as group_name %}Topics for <a href="{{ group_url }}">{{ group_name }}</a>{% endblocktrans %}
+    {% else %}
+        {% trans "Topics" %}
+    {% endif %}
+    {% endspaceless %}</h1>
+    
+    {% autopaginate topics %}
+    
+    {% for topic in topics %}
+        {% include "topics/topic_item.html" %}
+    {% endfor %}
+    
+    {% paginate %}
+    
+    {% if is_member %}
+        <h2>{% trans "New Topic" %}</h2>
+        
+        <form class="uniForm" method="POST" action="">
+            {% csrf_token %}
+            <fieldset class="inlineLabels">
+                {{ topic_form|as_uni_form }}
+                <div class="form_block">
+                    <input type="hidden" name="next" value="{{ request.path }}" />
+                    <input type="submit" value="{% trans "Create New Topic" %}" /></td>
+                </div>
+            </fieldset>
+        </form>
+    {% endif %}
+    
+{% endblock %}

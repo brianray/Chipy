@@ -1,0 +1,60 @@
+
+{% if meetings %}
+
+	{% for meeting in meetings %}
+
+<div class="dialog">
+ <div class="hd"><div class="c"></div></div>
+ <div class="bd">
+  <div class="c">
+   <div class="s">
+
+    <!-- content area -->
+
+<h1>ChiPy {{meeting.which}} Meeting</h1>
+<p><b>When:</b> {{meeting.when|date:"l F jS Y P"}}</p>
+<p><b>Where:</b> {{meeting.venue.name}} {{meeting.venue.address|safe}} {{meeting.venue.phone}}</p>
+
+<p><b>Topics:</b>
+	{%if meeting.topic_set.all.count %}
+
+		<ul>
+		{%for topic in meeting.topic_set.all%}
+			<li>
+				<h3>{{topic.title}}</h3> ({{topic.get_length_display}})<br>
+				By: <i>{{topic.by}}</i><br>
+				{{topic.description}}<br>
+				{% if topic.slides_link %}
+					<a href="{{topic.slides_link|safe}}">slides</a>
+				{% endif %}
+                                {% if topic.embed_video %}
+					<a rel="shadowbox[Mixed];width=480;height=390" href="{% url embed_video id=topic.id %}">Video</a>
+
+				{% endif %}
+			</li>
+		{%endfor%}
+		</ul>
+
+	{%else%}
+		TBD
+	{%endif%}
+</p>
+
+    <!-- content area -->
+
+   </div>
+  </div>
+ </div>
+ <div class="ft"><div class="c"></div></div>
+</div>
+
+	{% endfor %}
+{% else %}
+
+	{% if empty_msg %}
+		{{empty_msg}}
+	{% else %}
+		No Meetings
+	{% endif %}
+{% endif %}
+

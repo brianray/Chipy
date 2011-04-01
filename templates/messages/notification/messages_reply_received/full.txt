@@ -1,0 +1,7 @@
+{% load i18n %}{% load account_tags %}{% user_display message.sender as sender_display %}{% blocktrans with message.parent_msg as message_parent_msg and message.body|safe as message_body and message.get_absolute_url as message_url %}{{ sender_display }} replied to '{{ message_parent_msg }}':
+
+{{ message }}
+
+{{ message_body }}
+
+http://{{ current_site }}{{ message_url }}{% endblocktrans %}

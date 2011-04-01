@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Another attempt at CSS rounded-corner dialogs using the sliding doors technique</title>
+<style type="text/css">
+
+/* this is an example page. Real-use cases should never have inline CSS like this. ;) */
+
+body {
+ font:normal 76% georgia,helvetica,verdana,tahoma,arial,"sans serif";
+}
+
+.dialog {
+ width:67%;
+ margin:0px auto;
+ min-width:20em;
+ color:#fff;
+}
+
+.dialog .hd .c,
+.dialog .ft .c {
+ font-size:1px; /* ensure minimum height */
+ height:13px;
+}
+
+.dialog .ft .c {
+ height:14px;
+}
+
+.dialog .hd {
+ background:transparent url(tl.gif) no-repeat 0px 0px;
+}
+
+.dialog .hd .c {
+ background:transparent url(tr.gif) no-repeat right 0px;
+}
+
+.dialog .bd {
+ background:transparent url(ml.gif) repeat-y 0px 0px;
+}
+
+.dialog .bd .c {
+ background:transparent url(mr.gif) repeat-y right 0px;
+}
+
+.dialog .bd .c .s {
+ margin:0px 8px 0px 4px;
+ background:#000 url(ms.jpg) repeat-x 0px 0px;
+ padding:1em;
+}
+
+.dialog .ft {
+ background:transparent url(bl.gif) no-repeat 0px 0px;
+}
+
+.dialog .ft .c {
+ background:transparent url(br.gif) no-repeat right 0px;
+}
+
+
+/* content-specific */
+
+.dialog h1 {
+ /* header */
+ font-size:2em;
+ margin:0px;
+ padding:0px;
+ margin-top:-0.6em;
+}
+
+.dialog p {
+ margin:0.5em 0px 0px 0px;
+ padding:0px;
+ font:0.95em/1.5em arial,tahoma,"sans serif";
+}
+
+html>body .dialog pre {
+ font-size:1.1em;
+}
+
+</style>
+</head>
+
+<body>
+
+<div>
+
+<p>Here's a dialog.</p>
+
+<p>For some nifty drop-shadows with alpha transparency, see the <a href="png/">PNG-based version</a>.</p>
+
+<p><a href="dialog.zip">Download this code + images</a></p>
+
+<div class="dialog">
+ <div class="hd"><div class="c"></div></div>
+ <div class="bd">
+  <div class="c">
+   <div class="s">
+
+    <!-- content area -->
+
+    <h1>This is an inline dialog.</h1>
+    <p>This approach makes use of the "sliding doors" technique of background image layering, where two elements are nested in order to provide "left" and "right" images.</p>
+    <p>In this particular case, the left images have been cut at 800px width but could easily be larger for fluid use.</p>
+    <p>The dialog is split up into three main components, following a "header, body, footer" format - specifically, .hd, .bd and .ft in CSS. This formatting approach is the idea of <a href="http://nate.koechley.com/blog/">Nate Koechley</a>.</p>
+    <p>eg.</p>
+
+<pre>
+&lt;div class="dialog"&gt;
+
+ &lt;div class="hd"&gt;
+  &lt;div class="c"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="bd"&gt;
+  &lt;div class="c"&gt;
+   &lt;-- main content goes here --&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="ft"&gt;
+  &lt;div class="c"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+
+    <p>The header and footer elements are typically empty and serve primarily as hooks for the corners in CSS, but could easily be extended.</p>
+
+    <p>The .c class is where the right corner (or side) image is applied.</p>
+
+    <!-- content area -->
+
+   </div>
+  </div>
+ </div>
+ <div class="ft"><div class="c"></div></div>
+</div>
+
+<p>That was a dialog.</p>
+
+<p>Resources:</p>
+
+<p>tl.gif</p>
+<img src="tl.gif" alt="tl.gif" />
+
+<p>tr.gif</p>
+<img src="tr.gif" alt="tr.gif" />
+
+<p>ml.gif</p>
+<img src="ml.gif" alt="ml.gif" />
+
+<p>mr.gif</p>
+<img src="mr.gif" alt="mr.gif" />
+
+<p>bl.gif</p>
+<img src="bl.gif" alt="bl.gif" />
+
+<p>br.gif</p>
+<img src="br.gif" alt="br.gif" />
+
+<p>ms.jpg</p>
+<img src="ms.jpg" alt="ms.jpg" />
+
+</div>
+
+</body>
+</html>

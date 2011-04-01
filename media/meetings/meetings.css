@@ -1,0 +1,71 @@
+
+
+.dialog {
+ width:67%;
+ margin:0px auto;
+ min-width:20em;
+ color:#fff;
+}
+
+.dialog .hd .c,
+.dialog .ft .c {
+ font-size:1px; /* ensure minimum height */
+ height:13px;
+}
+
+.dialog .ft .c {
+ height:14px;
+}
+
+.dialog .hd {
+ background:transparent url(/site_media/static/meetings/box/tl.gif) no-repeat 0px 0px;
+}
+
+.dialog .hd .c {
+ background:transparent url(/site_media/static/meetings/box/tr.gif) no-repeat right 0px;
+}
+
+.dialog .bd {
+ background:transparent url(/site_media/static/meetings/box/ml.gif) repeat-y 0px 0px;
+}
+
+.dialog .bd .c {
+ background:transparent url(/site_media/static/meetings/box/mr.gif) repeat-y right 0px;
+}
+
+.dialog .bd .c .s {
+ margin:0px 8px 0px 4px;
+ background:#000 url(/site_media/static/meetings/box/ms.jpg) repeat-x 0px 0px;
+ padding:1em;
+}
+
+.dialog .ft {
+ background:transparent url(/site_media/static/meetings/box/bl.gif) no-repeat 0px 0px;
+}
+
+.dialog .ft .c {
+ background:transparent url(/site_media/static/meetings/box/br.gif) no-repeat right 0px;
+}
+
+
+/* content-specific */
+
+.dialog h1 {
+ /* header */
+ font-size:2em;
+ margin:0px;
+ padding:0px;
+ margin-top:-0.6em;
+}
+
+.dialog p {
+ margin:0.5em 0px 0px 0px;
+ padding:0px;
+ font:0.95em/1.5em arial,tahoma,"sans serif";
+}
+
+html>body .dialog pre {
+ font-size:1.1em;
+}
+
+
