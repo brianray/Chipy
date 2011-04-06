@@ -108,7 +108,7 @@ MIDDLEWARE_CLASSES = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
-ROOT_URLCONF = "wwwchipy.urls"
+ROOT_URLCONF = "urls"
 
 TEMPLATE_DIRS = [
     os.path.join(PROJECT_ROOT, "templates"),
@@ -134,7 +134,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "messages.context_processors.inbox",
     "friends_app.context_processors.invitations",
     
-    "wwwchipy.context_processors.combined_inbox_count",
+    "context_processors.combined_inbox_count",
 ]
 
 COMBINED_INBOX_COUNT_SOURCES = [
@@ -285,4 +285,10 @@ DEBUG_TOOLBAR_CONFIG = {
 try:
     from local_settings import *
 except ImportError:
-    pass
+    print """
+	You need to create a local_settings.py file which needs to contain at least database connection information.
+
+	Copy local_settings_example.py to local_settings.py and edit it. Make sure to add it to your ignore settings in hg or git!
+	"""
+
+
