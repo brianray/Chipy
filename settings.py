@@ -4,6 +4,10 @@
 import os.path
 import posixpath
 import pinax
+import datetime
+
+# hours to delay roll-over to new meeting display
+LATE_ARRIVAL_OFFSET = datetime.timedelta(hours=3)
 
 PINAX_ROOT = os.path.abspath(os.path.dirname(pinax.__file__))
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
