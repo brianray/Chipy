@@ -508,15 +508,6 @@
         }
     }, 
     {
-        "pk": 15, 
-        "model": "meetings.presentor", 
-        "fields": {
-            "phone": "", 
-            "name": "John Hunter", 
-            "email": ""
-        }
-    }, 
-    {
         "pk": 16, 
         "model": "meetings.presentor", 
         "fields": {
@@ -625,15 +616,6 @@
         }
     }, 
     {
-        "pk": 28, 
-        "model": "meetings.presentor", 
-        "fields": {
-            "phone": "", 
-            "name": "Nichols Romero", 
-            "email": ""
-        }
-    }, 
-    {
         "pk": 29, 
         "model": "meetings.presentor", 
         "fields": {
@@ -670,15 +652,6 @@
         }
     }, 
     {
-        "pk": 33, 
-        "model": "meetings.presentor", 
-        "fields": {
-            "phone": "", 
-            "name": "Brian Ray", 
-            "email": ""
-        }
-    }, 
-    {
         "pk": 34, 
         "model": "meetings.presentor", 
         "fields": {
@@ -706,24 +679,6 @@
         }
     }, 
     {
-        "pk": 37, 
-        "model": "meetings.presentor", 
-        "fields": {
-            "phone": "", 
-            "name": "Chris Webber", 
-            "email": ""
-        }
-    }, 
-    {
-        "pk": 38, 
-        "model": "meetings.presentor", 
-        "fields": {
-            "phone": "", 
-            "name": "Daniel Griffin", 
-            "email": ""
-        }
-    }, 
-    {
         "pk": 39, 
         "model": "meetings.presentor", 
         "fields": {
@@ -747,15 +702,6 @@
         "fields": {
             "phone": "", 
             "name": "Kumar McMillan", 
-            "email": ""
-        }
-    }, 
-    {
-        "pk": 42, 
-        "model": "meetings.presentor", 
-        "fields": {
-            "phone": "", 
-            "name": "Brian Ray and Bill Mania", 
             "email": ""
         }
     }, 
@@ -1094,7 +1040,7 @@
             "length": "TBD", 
             "stamp_modified": "2011-04-27 01:01:48", 
             "embed_video": "", 
-            "by": 15, 
+            "by": 7, 
             "stamp_created": "2011-04-27 01:01:48"
         }
     }, 
@@ -1154,7 +1100,7 @@
             "length": "TBD", 
             "stamp_modified": "2011-04-27 01:08:47", 
             "embed_video": "", 
-            "by": 15, 
+            "by": 7, 
             "stamp_created": "2011-04-27 01:08:47"
         }
     }, 
@@ -1439,7 +1385,7 @@
             "length": "60", 
             "stamp_modified": "2011-04-28 04:06:37", 
             "embed_video": "http://carlfk.blip.tv/file/2845210", 
-            "by": 28, 
+            "by": 26, 
             "stamp_created": "2011-04-28 04:06:37"
         }
     }, 
@@ -1544,7 +1490,7 @@
             "length": "60", 
             "stamp_modified": "2011-04-28 04:21:49", 
             "embed_video": "http://carlfk.blip.tv/file/3551094", 
-            "by": 33, 
+            "by": 16, 
             "stamp_created": "2011-04-28 04:21:07"
         }
     }, 
@@ -1619,7 +1565,7 @@
             "length": "60", 
             "stamp_modified": "2011-04-28 04:37:50", 
             "embed_video": "http://carlfk.blip.tv/file/3744452", 
-            "by": 33, 
+            "by": 16, 
             "stamp_created": "2011-04-28 04:37:50"
         }
     }, 
@@ -1634,7 +1580,7 @@
             "length": "45", 
             "stamp_modified": "2011-04-28 04:37:50", 
             "embed_video": "http://carlfk.blip.tv/file/3744569", 
-            "by": 37, 
+            "by": 23, 
             "stamp_created": "2011-04-28 04:37:50"
         }
     }, 
@@ -1649,7 +1595,7 @@
             "length": "30", 
             "stamp_modified": "2011-04-28 04:43:25", 
             "embed_video": "http://carlfk.blip.tv/file/3871547", 
-            "by": 38, 
+            "by": 24, 
             "stamp_created": "2011-04-28 04:43:25"
         }
     }, 
@@ -1709,7 +1655,7 @@
             "length": "45", 
             "stamp_modified": "2011-04-28 04:58:22", 
             "embed_video": "http://carlfk.blip.tv/file/4639302", 
-            "by": 42, 
+            "by": 16, 
             "stamp_created": "2011-04-28 04:58:22"
         }
     }, 
