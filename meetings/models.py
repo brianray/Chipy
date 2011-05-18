@@ -90,3 +90,14 @@ class TopicLink(models.Model):
 
     stamp_created = models.DateTimeField(auto_now_add=True)
     stamp_modified = models.DateTimeField(auto_now=True)
+
+class Rsvp(models.Model):
+    
+    def __unicode__(self):
+        return self.name
+
+    meeting = models.ForeignKey(Meeting)
+    name = models.CharField(max_length=30,unique=True)
+    rsvp = models.CharField(max_length=5)
+
+
