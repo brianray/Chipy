@@ -2,8 +2,8 @@ $(function() {
   // Google Map options
   // var myLatLng = new google.maps.LatLng(lat,lng);
   var myMapOpts = {
-	  zoom: 8,
-	  center: myLatLng,
+	  zoom: 12,
+	  center: new google.maps.LatLng(41.965972,-87.690372),
 	  mapTypeId: google.maps.MapTypeId.ROADMAP
   }
   var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myMapOpts);
