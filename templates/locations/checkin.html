@@ -1,6 +1,10 @@
 {% extends "locations/base.html" %}
 
 {% block head_title %}All Locations{% endblock %}
+{% block head_extra_stylesheets %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}chipy/css/google_maps.css" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+{% endblock %}
 
 {% block body %}
     <p>Did you mean: {{ location.place }}</p>
@@ -11,13 +15,13 @@
         <input type="hidden" name="longitude" value="{{ location.longitude }}" id="id_longitude" />
         <p><input type="submit" value="Checkin &rarr;"></p>
     </form>
-    <div id="ymap"></div>
+    <div id="map_canvas"></div>
 {% endblock %}
 
 {% block extra_body %}
     <script type="text/javascript">
         var _geo = [[{{ location.latitude }}, {{ location.longitude }}, '{{ location.place }}']];
     </script>
-    <script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.8&amp;appid={{ YAHOO_MAPS_API_KEY }}"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}pinax/js/locations.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}chipy/js/locations.js"></script>
 {% endblock %}
