@@ -6,7 +6,7 @@ $(function() {
 	  center: myLatLng,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP
   }
-  var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myMapOpts);
 
   // DISABLED FOR TESTING
   if(map_canvas && false) {
