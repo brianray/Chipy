@@ -1,14 +1,18 @@
 $(function() {
   // Google Map options
   // var myLatLng = new google.maps.LatLng(lat,lng);
+  var myLatLng = new google.maps.LatLng(41.965972,-87.690372);
+  var myCanvas = document.getElementById("map_canvas");
   var myMapOpts = {
 	  zoom: 12,
-	  center: new google.maps.LatLng(41.965972,-87.690372),
+	  center: myLatLng,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP
   }
-  var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myMapOpts);
+  var map_canvas = new google.maps.Map(myCanvas, myMapOpts);
 
-  // DISABLED FOR TESTING
+  //
+  // DISABLED: YAHOO MAPS CODE NEEDS TO BE REWRITTEN FOR GOOGLE MAPS API 3
+  //
   if(map_canvas && false) {
 	// add location markers from the _geo tuple to the map
 	for(var i = 0; i < _geo.length; ++i) {
