@@ -1,7 +1,7 @@
 $(function() {
   // Google Map options
   // var myLatLng = new google.maps.LatLng(lat,lng);
-  var myLatLng = new google.maps.LatLng(41.965972,-87.690372);
+  var myLatLng = new google.maps.LatLng(41.945972,-87.690372);
   var myCanvas = document.getElementById("map_canvas");
   var myMapOpts = {
 	  zoom: 12,
@@ -15,6 +15,7 @@ $(function() {
   if(map_canvas) {
 	// add location markers from the _geo tuple to the map
 	var markers = new Array();
+	var myBounds = new google.maps.LatLngBounds();
 	for(var i = 0; i < _geo.length; ++i) {
 		var g = _geo[i];
 		var markerLatLng = new google.maps.LatLng(g[0], g[1]);
@@ -23,6 +24,8 @@ $(function() {
 											map: map_canvas,
 											title: g[2]
 											});
+		myBounds.extend(markerLatLng);
+		map_canvas.fitBounds(myBounds);
 		}
 	}
 });
