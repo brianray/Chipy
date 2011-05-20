@@ -18,11 +18,11 @@ $(function() {
 	for(var i = 0; i < _geo.length; ++i) {
 		var g = _geo[i];
 		var markerLatLng = new google.maps.LatLng(g[0], g[1]);
-		var markers[i] = new google.maps.Marker({
-												position: markerLatLng,
-												map: map_canvas,
-												title: g[2]
-												});
+		markers[i] = new google.maps.Marker({
+											position: markerLatLng,
+											map: map_canvas,
+											title: g[2]
+											});
 		}
 	}
 });
