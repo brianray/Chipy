@@ -1,0 +1,7 @@
+/* www.chipy.org Google Map style for Pinax Yahoo Maps replacement */
+
+div#map_canvas {
+	height: 300px;
+	width: 400px;
+	float: right
+	}
