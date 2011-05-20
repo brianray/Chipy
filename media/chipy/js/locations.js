@@ -1,7 +1,13 @@
 $(function() {
   // Google Map options
   // var myLatLng = new google.maps.LatLng(lat,lng);
-  var myLatLng = new google.maps.LatLng(41.945972,-87.690372);
+  var Ravenswood = new google.maps.LatLng(41.945972,-87.690372);
+  if(_geo.length > 1) {
+	  var myLatLng = new google.maps.LatLng(_geo[0][0],_geo[0][1]);
+  } else {
+	  var myLatLng = Ravenswood;
+  }
+  
   var myCanvas = document.getElementById("map_canvas");
   var myMapOpts = {
 	  zoom: 12,
@@ -24,8 +30,10 @@ $(function() {
 											map: map_canvas,
 											title: g[2]
 											});
-		myBounds.extend(markerLatLng);
-		map_canvas.fitBounds(myBounds);
+		if (_geo.length > 1) {
+			myBounds.extend(markerLatLng);
+			map_canvas.fitBounds(myBounds);
 		}
 	}
+  }
 });
