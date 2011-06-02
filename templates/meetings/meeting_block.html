@@ -74,6 +74,7 @@
 	{%endif%}
 </p>
 
+{%if meeting.is_future%}
 <p><b>RSVP:</b> 
 
  <div class="rsvp_buttons">
@@ -95,6 +96,15 @@
   </div>  
 	
  </p>
+{%else %}
+
+	{% ifnotequal meeting.meetingrsvp_set.count 0 %}
+
+    		<code id="count">{{ meeting.meetingrsvp_set.count }}</code> where in attendance
+	 
+	{% endifnotequal %}
+
+{%endif%}
 
 
 

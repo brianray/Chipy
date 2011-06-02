@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from meetings.meeting_threadlocal import get_current_user
+import settings
+import datetime
 # Create your models here.
 
 MAX_LENGTH = 128
@@ -37,6 +39,10 @@ class Meeting(models.Model):
 
     stamp_created = models.DateTimeField(auto_now_add=True)
     stamp_modified = models.DateTimeField(auto_now=True)
+    
+    def is_future(self):
+ 	return bool( self.when >=  ( datetime.datetime.now()-settings.LATE_ARRIVAL_OFFSET ) )
+ 
 
     def rsvp_user_yes(self):
     	return self.meetingrsvp_set.filter(user=get_current_user(),rsvp='yes').count() != 0
