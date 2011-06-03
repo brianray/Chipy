@@ -1,5 +1,8 @@
 from django.db import models
-
+from django.contrib.auth.models import User
+from meetings.meeting_threadlocal import get_current_user
+import settings
+import datetime
 # Create your models here.
 
 MAX_LENGTH = 128
@@ -27,7 +30,7 @@ class Meeting(models.Model):
 
     def __unicode__(self):
 	if self.venue:
-	    return "%s at %s" % (self.when, self.venue.name)
+	    return "%s at %s" % (self.when.strftime("%A, %B %d %Y at %I:%M %p"), self.venue.name)
 	return "%s location TBD" % self.when
 
     when = models.DateTimeField()
@@ -36,6 +39,17 @@ class Meeting(models.Model):
 
     stamp_created = models.DateTimeField(auto_now_add=True)
     stamp_modified = models.DateTimeField(auto_now=True)
+    
+    def is_future(self):
+ 	return bool( self.when >=  ( datetime.datetime.now()-settings.LATE_ARRIVAL_OFFSET ) )
+ 
+
+    def rsvp_user_yes(self):
+    	return self.meetingrsvp_set.filter(user=get_current_user(),rsvp='yes').count() != 0
+
+    def rsvp_user_maybe(self):
+    	return self.meetingrsvp_set.filter(user=get_current_user(),rsvp='maybe').count() != 0
+
 
 class Presentor(models.Model):
     def __unicode__(self):
@@ -55,7 +69,7 @@ LENGTH_CODES =(
     ('45',':45 Forty-Five Minutes'),
     ('50',':50 Fifty Minutes'),
     ('60','1:00 One Hour'),
-    ('TBD',':?? To be determined'),
+    ('TBD','To be determined'),
 )
 
  
@@ -90,3 +104,21 @@ class TopicLink(models.Model):
 
     stamp_created = models.DateTimeField(auto_now_add=True)
     stamp_modified = models.DateTimeField(auto_now=True)
+
+class MeetingRsvp(models.Model):
+    
+    def __unicode__(self):
+        return self.name
+
+    meeting = models.ForeignKey(Meeting)
+    user = models.ForeignKey( User )
+    rsvp = models.CharField(max_length=5,choices=( 
+		('yes','yes'), 
+		('maybe','maybe') 
+	)
+    )
+
+    stamp_created = models.DateTimeField(auto_now_add=True)
+    stamp_modified = models.DateTimeField(auto_now=True)
+
+

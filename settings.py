@@ -4,6 +4,10 @@
 import os.path
 import posixpath
 import pinax
+import datetime
+
+# hours to delay roll-over to new meeting display
+LATE_ARRIVAL_OFFSET = datetime.timedelta(hours=3)
 
 PINAX_ROOT = os.path.abspath(os.path.dirname(pinax.__file__))
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -106,9 +110,10 @@ MIDDLEWARE_CLASSES = [
     "django_sorting.middleware.SortingMiddleware",
     "pinax.middleware.security.HideSensistiveFieldsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "meetings.meeting_threadlocal.ThreadLocalMiddleware",
 ]
 
-ROOT_URLCONF = "wwwchipy.urls"
+ROOT_URLCONF = "urls"
 
 TEMPLATE_DIRS = [
     os.path.join(PROJECT_ROOT, "templates"),
@@ -134,7 +139,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "messages.context_processors.inbox",
     "friends_app.context_processors.invitations",
     
-    "wwwchipy.context_processors.combined_inbox_count",
+    "context_processors.combined_inbox_count",
 ]
 
 COMBINED_INBOX_COUNT_SOURCES = [
@@ -285,4 +290,10 @@ DEBUG_TOOLBAR_CONFIG = {
 try:
     from local_settings import *
 except ImportError:
-    pass
+    print """
+	You need to create a local_settings.py file which needs to contain at least database connection information.
+
+	Copy local_settings_example.py to local_settings.py and edit it. Make sure to add it to your ignore settings in hg or git!
+	"""
+
+

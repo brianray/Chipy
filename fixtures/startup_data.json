@@ -1,0 +1,1692 @@
+[
+    {
+        "pk": 1, 
+        "model": "meetings.venue", 
+        "fields": {
+            "name": "SMS", 
+            "phone": "(773) 491-6718", 
+            "link": "", 
+            "address": "1900 N AUSTIN AVE,  CHICAGO,  IL  60639-5010", 
+            "directions": "", 
+            "embed_map": "", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "meetings.venue", 
+        "fields": {
+            "name": "Imaginary Landscapes, LLC.", 
+            "phone": "", 
+            "link": "", 
+            "address": "5121 N Ravenswood Avenue  Chicago, IL 60640", 
+            "directions": "", 
+            "embed_map": "", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "meetings.venue", 
+        "fields": {
+            "name": "Axciom Corp.", 
+            "phone": "", 
+            "link": "", 
+            "address": " 1501 Opus Place, Downers Grove, IL 60515", 
+            "directions": "", 
+            "embed_map": "", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "meetings.venue", 
+        "fields": {
+            "name": "ITA", 
+            "phone": "312.435.2805", 
+            "link": "", 
+            "address": "15th Floor 200 S. Wacker Drive Chicago, IL 60606", 
+            "directions": "", 
+            "embed_map": "", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": 1, 
+            "stamp_modified": "2011-04-27 00:25:14", 
+            "when": "2004-08-27 19:00:00", 
+            "stamp_created": "2011-04-27 00:23:06", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": 2, 
+            "stamp_modified": "2011-04-27 00:28:31", 
+            "when": "2004-09-09 19:00:00", 
+            "stamp_created": "2011-04-27 00:28:31", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": 1, 
+            "stamp_modified": "2011-04-27 00:31:46", 
+            "when": "2004-10-14 19:00:00", 
+            "stamp_created": "2011-04-27 00:30:45", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:35:11", 
+            "when": "2004-11-11 19:00:00", 
+            "stamp_created": "2011-04-27 00:35:11", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:37:22", 
+            "when": "2004-12-09 19:00:00", 
+            "stamp_created": "2011-04-27 00:37:22", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:39:17", 
+            "when": "2005-01-13 19:00:00", 
+            "stamp_created": "2011-04-27 00:39:17", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:41:10", 
+            "when": "2005-02-20 19:00:00", 
+            "stamp_created": "2011-04-27 00:41:10", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:43:50", 
+            "when": "2005-03-10 19:00:00", 
+            "stamp_created": "2011-04-27 00:43:50", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:45:54", 
+            "when": "2005-04-14 19:00:00", 
+            "stamp_created": "2011-04-27 00:45:54", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:47:27", 
+            "when": "2005-05-12 19:00:00", 
+            "stamp_created": "2011-04-27 00:47:27", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "when": "2005-06-09 19:00:00", 
+            "stamp_created": "2011-04-27 00:58:11", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 01:01:48", 
+            "when": "2005-06-09 19:00:00", 
+            "stamp_created": "2011-04-27 01:01:48", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 01:05:25", 
+            "when": "2005-08-11 19:00:00", 
+            "stamp_created": "2011-04-27 01:05:25", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 01:08:47", 
+            "when": "2005-09-08 19:00:00", 
+            "stamp_created": "2011-04-27 01:08:47", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-27 01:12:16", 
+            "when": "2005-10-13 19:00:00", 
+            "stamp_created": "2011-04-27 01:12:16", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": 3, 
+            "stamp_modified": "2011-04-27 01:17:34", 
+            "when": "2006-01-12 19:00:00", 
+            "stamp_created": "2011-04-27 01:17:34", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 03:28:14", 
+            "when": "2006-10-12 19:00:00", 
+            "stamp_created": "2011-04-28 03:28:14", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 03:39:02", 
+            "when": "2009-06-11 19:00:00", 
+            "stamp_created": "2011-04-28 03:39:02", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 03:47:45", 
+            "when": "2009-07-09 19:00:00", 
+            "stamp_created": "2011-04-28 03:47:45", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 03:57:07", 
+            "when": "2009-10-08 19:00:00", 
+            "stamp_created": "2011-04-28 03:56:04", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 04:06:37", 
+            "when": "2009-11-12 19:00:00", 
+            "stamp_created": "2011-04-28 04:06:37", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 04:12:49", 
+            "when": "2009-12-10 19:00:00", 
+            "stamp_created": "2011-04-28 04:12:49", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 04:17:39", 
+            "when": "2010-01-14 19:00:00", 
+            "stamp_created": "2011-04-28 04:17:39", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 04:21:49", 
+            "when": "2010-03-11 19:00:00", 
+            "stamp_created": "2011-04-28 04:21:07", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 04:27:18", 
+            "when": "2010-04-08 19:00:00", 
+            "stamp_created": "2011-04-28 04:27:18", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 04:32:09", 
+            "when": "2010-05-13 19:00:00", 
+            "stamp_created": "2011-04-28 04:32:09", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": 2, 
+            "stamp_modified": "2011-04-28 04:37:50", 
+            "when": "2010-06-10 19:00:00", 
+            "stamp_created": "2011-04-28 04:37:50", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": null, 
+            "stamp_modified": "2011-04-28 04:43:25", 
+            "when": "2010-07-08 19:00:00", 
+            "stamp_created": "2011-04-28 04:43:25", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": 4, 
+            "stamp_modified": "2011-04-28 04:51:15", 
+            "when": "2010-11-11 19:00:00", 
+            "stamp_created": "2011-04-28 04:51:15", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "meetings.meeting", 
+        "fields": {
+            "venue": 2, 
+            "stamp_modified": "2011-04-28 04:58:22", 
+            "when": "2011-01-13 19:00:00", 
+            "stamp_created": "2011-04-28 04:58:22", 
+            "which": "Loop"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Aaron Lav", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Skip Montanaro", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Edward Ream", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Chris McAvoy", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Ian Bicking", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Brian Zimmer", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "John Hunter", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Robert Ramsdell", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Brian Fitzpatrick", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Micheal Tobis", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Jason Gessner", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Ed Summers", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Adrian Holovaty", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Jason Huggins", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Brian Ray", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Fawad Halim", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "David", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Jason", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "David Beazley", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Garrett Smith", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "James Snyder", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Chris Webber", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Daniel Griffin", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "William Scullin and Massimo Di Pierro", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Nichols Romero", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "William Scullin and James P. Snyder", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Massimo Di Pierro", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Tal Liron", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Matt Dorn", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Jordan Bettis", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Brian Curtin", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Peter Fein", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "William Scullin", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Alex Gaynor", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Michael Mileusnich", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Kumar McMillan", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "meetings.presentor", 
+        "fields": {
+            "phone": "", 
+            "name": "Carl Karsten", 
+            "email": ""
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Aaron Lav presented the uses of the Nevow framework, which is built on top of the Twisted server environment. Nevow describes itself as a \"web application construction kit\".", 
+            "title": "Nevow", 
+            "meeting": 1, 
+            "slides_link": "http://www.pobox.com/~asl2/talks/nevow/out/", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:23:06", 
+            "embed_video": "", 
+            "by": 1, 
+            "stamp_created": "2011-04-27 00:23:06"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Skip Montanaro told us about his Pythonic efforts in combating Spam through the SpamBayes project.\r\n\r\nParaphrasing from the SpamBayes Page on SourceForge , it is an effort at developing a Bayesian anti-spam filter, initially based on the work of Paul Graham. The major difference between SpamBayes and other, similar projects is the emphasis on testing newer approaches to scoring messages. While most anti-spam projects are still working with the original Graham algorithm, SpamBayes uses a number of alternate methods that yielded a more useful response.\r\n\r\nIn addition to his involvement in SpamBayes, Skip is also one of the core maintainers of the Python interpreter. We also had some interesting discussion about how to contribute to Python itself.", 
+            "title": "SpamBayes", 
+            "meeting": 2, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:28:31", 
+            "embed_video": "", 
+            "by": 2, 
+            "stamp_created": "2011-04-27 00:28:31"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Edward Ream told us about his open source pythonic tool for \"literate programming\", LEO.\r\n\r\nLeo is an outlining editor that creates and displays relationships between code and data in a new way; you can't do what Leo does with Emacs or any other tool. Leo shows these relationships in an outline using noweb, a simple markup language.\r\n\r\nEdward's talk will briefly discuss outlines, noweb and clones, and then show how these three powerful features can be combined to clarify and simplify all aspects of programming: design, coding, testing and unit test, maintenance, data management and project management.", 
+            "title": "LEO", 
+            "meeting": 3, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:31:46", 
+            "embed_video": "", 
+            "by": 3, 
+            "stamp_created": "2011-04-27 00:30:45"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Chris McAvoy says: Yes, it's a cat feeder that talks to Python, which talks to you, via the world wide internet. The interface to the feeder can be found at http://kittens.lonelylion.com.", 
+            "title": "Cat Feeder", 
+            "meeting": 4, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:35:11", 
+            "embed_video": "", 
+            "by": 4, 
+            "stamp_created": "2011-04-27 00:35:11"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Ian Bicking gave a presentation on SQLObject -- you can see the presentation here.", 
+            "title": "SQLobject", 
+            "meeting": 4, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:35:11", 
+            "embed_video": "", 
+            "by": 5, 
+            "stamp_created": "2011-04-27 00:35:11"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "We talked about testing. A bit about Fit, a bit about py.test, a bit about doctest. See the py.test presentation.", 
+            "title": "Testing", 
+            "meeting": 5, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:37:22", 
+            "embed_video": "", 
+            "by": null, 
+            "stamp_created": "2011-04-27 00:37:22"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Jython is an implementation of Python that runs on the Java Virtual Machine. Brian recently receive a grant from the Python Software Foundation for his project Moving Jython Forward.", 
+            "title": "Jython", 
+            "meeting": 6, 
+            "slides_link": "http://www.python.org/psf/grants/Jython_PSF_Grant_Proposal.pdf", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:39:17", 
+            "embed_video": "", 
+            "by": 6, 
+            "stamp_created": "2011-04-27 00:39:17"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "John Hunter of the University of Chicago School of Medicine gave a presentation on Matplotlib, a Python package for scientific plotting that (among other things) emulates Matlab plotting. Matplotlib is a python 2D plotting library which produces publication quality figures using in a variety of hardcopy formats and interactive GUI environments across platforms. matplotlib can be used in python scripts, interactively from the python shell (as in matlab or mathematica), in web application servers generating dynamic charts, or embedded in GUI applications.", 
+            "title": "Matplotlib", 
+            "meeting": 7, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:41:10", 
+            "embed_video": "", 
+            "by": 7, 
+            "stamp_created": "2011-04-27 00:41:10"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Robert Ramsdell told us about SimPy , an object-oriented, process-based discrete-event simulation language based on standard Python. It provides the modeler with components of a simulation model including processes, for active components like customers, messages, and vehicles, and resources, for passive components that form limited capacity congestion points like servers, checkout counters, and tunnels. It also provides monitor variables to aid in gathering statistics.", 
+            "title": "SimPy", 
+            "meeting": 8, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:43:50", 
+            "embed_video": "", 
+            "by": 8, 
+            "stamp_created": "2011-04-27 00:43:50"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Ian Bicking told us about WSGIKit , which implements both WSGI Webware and a set of Webware-neutral WSGI middleware components that WSGI Webware is built on top of. WSGI is a middleware layer to allow interoperability of Python web applications which implements PEP333.", 
+            "title": "WSGIKit", 
+            "meeting": 8, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:43:50", 
+            "embed_video": "", 
+            "by": 5, 
+            "stamp_created": "2011-04-27 00:43:50"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "The goal of the Subversion project is to build a version control system that is a compelling replacement for CVS in the open source community.\r\n\r\nBrian Fitzpatrick will tell us about how to use Subversion, the Python bindings, and about cvs2svn, which he was one of the leads on-- Fitz says that 'cvs2svn is the most difficult piece of code I've ever written--I'm going to write a paper for CodeCon next year about it called \"Making Apples from Applesauce.\" '", 
+            "title": "Subversion and Making Apples from Applesauce", 
+            "meeting": 9, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:45:54", 
+            "embed_video": "", 
+            "by": 9, 
+            "stamp_created": "2011-04-27 00:45:54"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Ian Bicking presented a tutorial Python web programming, using several different systems: Python Paste, Webware/WebKit, Zope Page Templates (not just for Zope!), and SQLObject. The technology covered is similar to those presented in the To-Do tutorial. Except live and in person.", 
+            "title": "Web programming in Python with Paste", 
+            "meeting": 10, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:47:27", 
+            "embed_video": "", 
+            "by": 5, 
+            "stamp_created": "2011-04-27 00:47:27"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Michael Tobis told us about operator overloading, with an example of how he gets around writing regular expressions (he hates them, he\u201a\u00c4\u00f4s in the minority).", 
+            "title": "Operator Overloading", 
+            "meeting": 11, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "embed_video": "", 
+            "by": 10, 
+            "stamp_created": "2011-04-27 00:58:11"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Robert Ramsdell compared Tkinter and wxPython (no clear verdict).", 
+            "title": "Tkinter vs. wxPython", 
+            "meeting": 11, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "embed_video": "", 
+            "by": 8, 
+            "stamp_created": "2011-04-27 00:58:11"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Chris McAvoy talked about mx.DateTime.", 
+            "title": "mx.DateTime", 
+            "meeting": 11, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "embed_video": "", 
+            "by": 4, 
+            "stamp_created": "2011-04-27 00:58:11"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Jason Gessner presented Myghty .", 
+            "title": "Myghty", 
+            "meeting": 11, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "embed_video": "", 
+            "by": 11, 
+            "stamp_created": "2011-04-27 00:58:11"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Ed Summers showed us pylucene .", 
+            "title": "pyLucene", 
+            "meeting": 11, 
+            "slides_link": "http://www.inkdroid.org/talks/pylucene/", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "embed_video": "", 
+            "by": 12, 
+            "stamp_created": "2011-04-27 00:58:11"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Adrian Holovaty lifted the curtain on chicagocrime.org .", 
+            "title": "Chicagocrime.org", 
+            "meeting": 11, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "embed_video": "", 
+            "by": 13, 
+            "stamp_created": "2011-04-27 00:58:11"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Jason Huggins presented his web testing suite, Selenium .", 
+            "title": "Selenium", 
+            "meeting": 11, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 00:58:11", 
+            "embed_video": "", 
+            "by": 14, 
+            "stamp_created": "2011-04-27 00:58:11"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Adrian Holovaty will be giving a preview of his new web framework Django.", 
+            "title": "Django", 
+            "meeting": 12, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:01:48", 
+            "embed_video": "", 
+            "by": 13, 
+            "stamp_created": "2011-04-27 01:01:48"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Ian Bicking will discuss some functional programming techniques available in Python.", 
+            "title": "Functional Programming Techniques in Pyhton", 
+            "meeting": 12, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:01:48", 
+            "embed_video": "", 
+            "by": 5, 
+            "stamp_created": "2011-04-27 01:01:48"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "*Cancelled*John Hunter will talk about using Python with C and C++ projects.*Canceled*", 
+            "title": "Python with C and C++ Projects", 
+            "meeting": 12, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:01:48", 
+            "embed_video": "", 
+            "by": 7, 
+            "stamp_created": "2011-04-27 01:01:48"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Aaron Lav talked about Unicode and middleproxy. The talk is here.", 
+            "title": "Middleproxy", 
+            "meeting": 13, 
+            "slides_link": "http://www.panix.com/~asl2/talks/unicode_talk/out/", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:05:25", 
+            "embed_video": "", 
+            "by": 1, 
+            "stamp_created": "2011-04-27 01:05:25"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "A talk on distutils and setuptools -- how to use Python packages, and how to make your own. The talk is at http://ianbicking.org/docs/setuptools-presentation", 
+            "title": "Distutils And Setuptools", 
+            "meeting": 13, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:05:25", 
+            "embed_video": "", 
+            "by": 5, 
+            "stamp_created": "2011-04-27 01:05:25"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Pdb Library", 
+            "meeting": 13, 
+            "slides_link": "http://infohost.nmt.edu/tcc/help/pubs/python22/debugger.html", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:05:25", 
+            "embed_video": "As the first installment in our \"standard module of the month\" club, an introduction to the pdb library. Here's a promised link to a nice pdb tutorial.", 
+            "by": null, 
+            "stamp_created": "2011-04-27 01:05:25"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "John Hunter, author of the matplotlib plotting package, will introduce\r\nus to using SWIG, the most common glue strategy in the Python world", 
+            "title": "SWIG", 
+            "meeting": 14, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:08:47", 
+            "embed_video": "", 
+            "by": 7, 
+            "stamp_created": "2011-04-27 01:08:47"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Brian Ray will introduce us to strategies to call python from C, and\r\ntell us a bit about his GULP project", 
+            "title": "Calling Python FROM C", 
+            "meeting": 14, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:08:47", 
+            "embed_video": "", 
+            "by": 16, 
+            "stamp_created": "2011-04-27 01:08:47"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Michael Tobis will present an overview of Python interoperability\r\npointing to tools to interoperate with Java, Fortran and others", 
+            "title": "Interoperability", 
+            "meeting": 14, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:08:47", 
+            "embed_video": "", 
+            "by": 10, 
+            "stamp_created": "2011-04-27 01:08:47"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Generic Functions (aka RuleDispatch) By Python God: Ian Bicking", 
+            "title": "Generic", 
+            "meeting": 15, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:12:16", 
+            "embed_video": "", 
+            "by": 5, 
+            "stamp_created": "2011-04-27 01:12:16"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "The Random Module Presented By Mathematician: Robert Ramsdell", 
+            "title": "Random", 
+            "meeting": 15, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:12:16", 
+            "embed_video": "", 
+            "by": 8, 
+            "stamp_created": "2011-04-27 01:12:16"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "PYRO (Python Remote Objects) library By our Linux lover from the Middle East: Fawad Halim", 
+            "title": "Remote", 
+            "meeting": 15, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:12:16", 
+            "embed_video": "", 
+            "by": 17, 
+            "stamp_created": "2011-04-27 01:12:16"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Lightning presentations on the Python golf contest that stirred up interest during the holidays on our mailing list. (At least a couple of us who got around to submitting solutions will talk briefly about the clever encodings and nasty tricks we used to turn a simple little algorithm into a dense, contorted bit of ugly (but short) code.)", 
+            "title": "Python Golf", 
+            "meeting": 16, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:17:34", 
+            "embed_video": "", 
+            "by": null, 
+            "stamp_created": "2011-04-27 01:17:34"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "David will talk about the datetime module, saver of bacon", 
+            "title": "Datetime", 
+            "meeting": 16, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:17:34", 
+            "embed_video": "", 
+            "by": 18, 
+            "stamp_created": "2011-04-27 01:17:34"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Jason will show off some 3D designs, thinly disguised as an introduction to VPython", 
+            "title": "VPython", 
+            "meeting": 16, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-27 01:17:34", 
+            "embed_video": "", 
+            "by": 19, 
+            "stamp_created": "2011-04-27 01:17:34"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "(Python Lex Yacc)", 
+            "title": "PLY", 
+            "meeting": 17, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-28 03:28:14", 
+            "embed_video": "", 
+            "by": 20, 
+            "stamp_created": "2011-04-28 03:28:14"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "(without PyPy)", 
+            "title": "Performance Python", 
+            "meeting": 17, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-28 03:28:14", 
+            "embed_video": "", 
+            "by": 10, 
+            "stamp_created": "2011-04-28 03:28:14"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Asynchronous vs. Threaded Programming In Python", 
+            "meeting": 18, 
+            "slides_link": "", 
+            "length": "45", 
+            "stamp_modified": "2011-04-28 03:39:02", 
+            "embed_video": "http://blip.tv/file/2232349", 
+            "by": 21, 
+            "stamp_created": "2011-04-28 03:39:02"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "David Beazley: mind-blowing presentation about how the Python GIL actually works and why it's even worse than most people even imagine.", 
+            "title": "Mindblowing Python GIL", 
+            "meeting": 18, 
+            "slides_link": "http://www.dabeaz.com/python/GIL.pdf", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 03:39:02", 
+            "embed_video": "http://blip.tv/file/2232410", 
+            "by": 20, 
+            "stamp_created": "2011-04-28 03:39:02"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "PyMite http://www.pythononachip.org \"a significant subset of the Python language on microcontrollers without an OS.\" PyMite ligntning talk at PyCon09 http://carlfk.blip.tv/file/1996853/ \"lets Python run in a BILLION new places.\" And a special guest via the intertubes: Dean Hall, the lead PyMite developer.", 
+            "title": "PyMite", 
+            "meeting": 19, 
+            "slides_link": "", 
+            "length": "30", 
+            "stamp_modified": "2011-04-28 03:47:45", 
+            "embed_video": "http://blip.tv/file/2345450", 
+            "by": 22, 
+            "stamp_created": "2011-04-28 03:47:45"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Vidscraper - Library for getting metadata about video urls. Clean-ish solution for a messy problem. Given html containing media, returns a dictionary of {\"title\": \"That guy on cam\", \"description\": \"lol that guy\", \"file_url\": \"http://foo.bar/foo.mp4\"} - slightly related to: http://www.getmiro.com/blog/2008/10/announcing-miro-local-tv/", 
+            "title": "Vidscraper", 
+            "meeting": 19, 
+            "slides_link": "", 
+            "length": "25", 
+            "stamp_modified": "2011-04-28 03:47:45", 
+            "embed_video": "http://blip.tv/file/2345426", 
+            "by": 23, 
+            "stamp_created": "2011-04-28 03:47:45"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "couchdb http://couchdb.apache.org", 
+            "title": "couchdb", 
+            "meeting": 19, 
+            "slides_link": "", 
+            "length": "15", 
+            "stamp_modified": "2011-04-28 03:47:45", 
+            "embed_video": "http://blip.tv/file/2345425", 
+            "by": 24, 
+            "stamp_created": "2011-04-28 03:47:45"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "I guess I'm going to give a talk on python in the upcoming Blender 2.5 release. It'll be pretty unprepared, but it's getting pretty interesting. Also, Blender 2.5 is the first app I know of that *requires* Python 3.X. So that's pretty interesting on its own. But there's plenty more interesting stuff to discuss. It's going to be mostly an overview talk. Blender's python integration could possibly span 3 separate talks, especially considering the blender game engine's use of it, which is a seaparate but interesting talk. ChiPy is a group of Chicago Python Programmers, l33t, and n00bs. Meetings are held monthly at various locations around Chicago. Also, ChiPy is a proud sponsor of many Open Source and Educational efforts in Chicago. Stay tuned to the mailing list for more info.", 
+            "title": "Blender 2.5 loves Python 3", 
+            "meeting": 20, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-28 03:56:04", 
+            "embed_video": "http://carlfk.blip.tv/file/2785963", 
+            "by": 23, 
+            "stamp_created": "2011-04-28 03:56:04"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Python for Scientific and High Performance Computing: Part 1", 
+            "meeting": 21, 
+            "slides_link": "", 
+            "length": "30", 
+            "stamp_modified": "2011-04-28 04:06:37", 
+            "embed_video": "http://carlfk.blip.tv/file/2844247", 
+            "by": 25, 
+            "stamp_created": "2011-04-28 04:06:37"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Python for Scientific and High Performance Computing: Part 2", 
+            "meeting": 21, 
+            "slides_link": "", 
+            "length": "50", 
+            "stamp_modified": "2011-04-28 04:06:37", 
+            "embed_video": "http://carlfk.blip.tv/file/2844521", 
+            "by": 27, 
+            "stamp_created": "2011-04-28 04:06:37"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Python for Scientific and High Performance Computing: Part 3", 
+            "meeting": 21, 
+            "slides_link": "", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 04:06:37", 
+            "embed_video": "http://carlfk.blip.tv/file/2845210", 
+            "by": 26, 
+            "stamp_created": "2011-04-28 04:06:37"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Python for Scientific and High Performance Computing: Part 4", 
+            "meeting": 21, 
+            "slides_link": "", 
+            "length": "30", 
+            "stamp_modified": "2011-04-28 04:06:37", 
+            "embed_video": "http://carlfk.blip.tv/file/2845400", 
+            "by": 29, 
+            "stamp_created": "2011-04-28 04:06:37"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": " Introduction to the whole Debian distribution system, which is actually pretty neat, and show you how to push your Python app into a Personal Package Archive (PPA) on Launchpad, which is not neat at all and in fact is an undocumented abyss teeming with poisonous, man-eating crocodiles. I'll save you from the crocodiles. sowwy, no vid :(", 
+            "title": "Packaging Python for Debian/Ubuntu", 
+            "meeting": 22, 
+            "slides_link": "", 
+            "length": "TBD", 
+            "stamp_modified": "2011-04-28 04:12:49", 
+            "embed_video": "", 
+            "by": 30, 
+            "stamp_created": "2011-04-28 04:12:49"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "A common complaint about Django, the leading Python web application framework, is that it doesn't make writing REST APIs easy enough. In fact the paradigm for a typical Django application involves views which map to HTML page templates. With end users increasingly expecting rich interfaces with the responsiveness of a desktop application, this paradigm is being superseded. Fortunately a third-party Django application called Piston fills the gap. Django/Piston can be combined with the Ext JS JavaScript framework and widget set to create attractive, responsive Web applications, and this talk will show you how.", 
+            "title": "REST-ful Web apps with Django Piston", 
+            "meeting": 22, 
+            "slides_link": "http://weblog.mattdorn.com/content/restful-web-apps-with-django-piston-and-ext-js/", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 04:12:50", 
+            "embed_video": "http://carlfk.blip.tv/file/3168134", 
+            "by": 31, 
+            "stamp_created": "2011-04-28 04:12:50"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Changes to the GIL that have been added to the Python 3 branch", 
+            "meeting": 23, 
+            "slides_link": "", 
+            "length": "30", 
+            "stamp_modified": "2011-04-28 04:17:39", 
+            "embed_video": "http://carlfk.blip.tv/file/3107867 ", 
+            "by": 20, 
+            "stamp_created": "2011-04-28 04:17:39"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "GitPython", 
+            "meeting": 23, 
+            "slides_link": "", 
+            "length": "30", 
+            "stamp_modified": "2011-04-28 04:17:39", 
+            "embed_video": "http://carlfk.blip.tv/file/3107979", 
+            "by": 23, 
+            "stamp_created": "2011-04-28 04:17:39"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "", 
+            "title": "Technical, standards-spec style analysis of Unicode", 
+            "meeting": 23, 
+            "slides_link": "", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 04:17:39", 
+            "embed_video": "http://carlfk.blip.tv/file/3107101/", 
+            "by": 32, 
+            "stamp_created": "2011-04-28 04:17:39"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "C++, Fortran, Emacs Lisp, Erlang, Haskell, JavaScript, Factor, Ruby, Common Lisp, Perl, Forth, Java, F-Script, Limbo, Closure", 
+            "title": "Language Shoot Out", 
+            "meeting": 24, 
+            "slides_link": "", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 04:21:49", 
+            "embed_video": "http://carlfk.blip.tv/file/3551094", 
+            "by": 16, 
+            "stamp_created": "2011-04-28 04:21:07"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "What's coming up in 2.7 Brian Curtin With 2.7 likely being the end of the 2.x line, come see what's in store for the upcoming release. Changes to unittest, introduction of the argparse module, and a whole host of 3.1 features are here to ease your eventual transition into the wonderful world of Python 3. ", 
+            "title": "What's coming up in 2.7", 
+            "meeting": 25, 
+            "slides_link": "", 
+            "length": "50", 
+            "stamp_modified": "2011-04-28 04:27:18", 
+            "embed_video": "http://carlfk.blip.tv/file/3551166", 
+            "by": 34, 
+            "stamp_created": "2011-04-28 04:27:18"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "A Pythonic Logger Peter Fein Twiggy is an early-stage project to build a more Pythonic logging module. It was started at Pycon 2010.  Home: http://python-twiggy.googlecode.com", 
+            "title": "Twiggy: A Python Logger", 
+            "meeting": 25, 
+            "slides_link": "", 
+            "length": "45", 
+            "stamp_modified": "2011-04-28 04:27:18", 
+            "embed_video": "http://carlfk.blip.tv/file/3551150", 
+            "by": 35, 
+            "stamp_created": "2011-04-28 04:27:18"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "http://jessenoller.com/2010/04/22/why-arent-you-contributing-to-python/ covers an interesting topic (to me), and I think it would be cool to show an example of how to contribute a fix to Python. My idea is to go from start-to-finish finding a bug in Python, checking out the source, fixing the bug, making a patch, signing up on the tracker, then submitting the patch. A documentation fix would probably be easiest/quickest, but I could look around the bug tracker and keep a really small standard library bug in my back pocket so we can fix some actual code.", 
+            "title": "How to contribute to Python", 
+            "meeting": 26, 
+            "slides_link": "http://jessenoller.com/2010/04/22/why-arent-you-contributing-to-python/", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 04:32:09", 
+            "embed_video": "http://carlfk.blip.tv/file/3624742", 
+            "by": 34, 
+            "stamp_created": "2011-04-28 04:32:09"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "A summary of lessons learned by building CPython with non-gnu compilers on x86 and non-x86 platforms. We've got some fun, and actually sort of depressing data learned from trying to scale out a python science code to 32,768 cores. None of it is a surprise, but it's got some interesting implications for large distributed applications of all stripes that if I'm lucky, someone will stand up and point out the obvious solutions.", 
+            "title": "Building the Python Interpreter and Going for Speed", 
+            "meeting": 26, 
+            "slides_link": "", 
+            "length": "45", 
+            "stamp_modified": "2011-04-28 04:32:10", 
+            "embed_video": "http://carlfk.blip.tv/file/3625019", 
+            "by": 36, 
+            "stamp_created": "2011-04-28 04:32:10"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Registering Models in the Admin\r\nCustomizing the filtering, search, general display\r\nAdding Actions\r\nInlines\r\nCustom Forms\r\nMaking Fields Readonly by inheriting\r\nIntegrating jQuery\r\nCustom Widgets like Image thumbnails\r\nChanging look and feel\r\nI plan on showing a live example and customizing as we go.\r\n\r\nThis will be a pretty mid-level talk and should be interesting to those not familiar, those who know django and considered using the admin, and for djangonuts who want to do some pretty advanced stuff.", 
+            "title": "Customizing the Django Admin", 
+            "meeting": 27, 
+            "slides_link": "", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 04:37:50", 
+            "embed_video": "http://carlfk.blip.tv/file/3744452", 
+            "by": 16, 
+            "stamp_created": "2011-04-28 04:37:50"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Creating tools with Python and Blender 2.5's bpy API - A walk through using Blender 2.5's new Python API to automate various animation tasks, using examples from the film Patent Absurdity: http://patentabsurdity.com/\r\n\r\nhttp://patentabsurdity.com/fsf_patent_anims.tar.gz has the sources of the animations demonstrated", 
+            "title": "Using Python for Blender Animations", 
+            "meeting": 27, 
+            "slides_link": "", 
+            "length": "45", 
+            "stamp_modified": "2011-04-28 04:37:50", 
+            "embed_video": "http://carlfk.blip.tv/file/3744569", 
+            "by": 23, 
+            "stamp_created": "2011-04-28 04:37:50"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "What twisted is and its purpose in life(ie the reactor pattern). - Non-blocking network programming. - The confusing topic of deferreds and callbacks everywhere. - Methods for dealing with blocking APIs.", 
+            "title": "Programming with Twisted", 
+            "meeting": 28, 
+            "slides_link": "", 
+            "length": "30", 
+            "stamp_modified": "2011-04-28 04:43:25", 
+            "embed_video": "http://carlfk.blip.tv/file/3871547", 
+            "by": 24, 
+            "stamp_created": "2011-04-28 04:43:25"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Python has a reputation for being a bit slow, but it doesn't have to be that way. This talk will cover why Python is slow, and what two of the most exciting virtual machines are doing about it.", 
+            "title": "PyPy and Unladen-Swallow: Making your Python Fast", 
+            "meeting": 28, 
+            "slides_link": "", 
+            "length": "50", 
+            "stamp_modified": "2011-04-28 04:43:25", 
+            "embed_video": "http://carlfk.blip.tv/file/3871726", 
+            "by": 39, 
+            "stamp_created": "2011-04-28 04:43:25"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "using Mako combined with Cherrypy to create a Python web server, passing data back and forth, and some javascript issues with certain browsers.", 
+            "title": "Mako and Cherrypy", 
+            "meeting": 29, 
+            "slides_link": "", 
+            "length": "20", 
+            "stamp_modified": "2011-04-28 04:51:15", 
+            "embed_video": "http://carlfk.blip.tv/file/4372233", 
+            "by": 40, 
+            "stamp_created": "2011-04-28 04:51:15"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "It's a great new open source tool that helps you support all versions of python with your existing automated tests. It's not a test runner, it's a super test runner runner! Or something. There is no easy way to describe it which is why the front page of the website is sort of confusing, IMO.\r\n\r\nWe use tox on the Nose project to make sure each code change doesn't break the tests in Python 2.4, 2.5, 2.6, 2.7, 3.0 or Jython. Not everybody targets so many environments but if you want to maintain a widely used module then you probably will want to use tox someday.\r\n\r\nHere's our Hudson matrix setup w/ tox: http://hudson.testrun.org/job/nose-unstable/ (we just set this up recently which is why most builds were broken in one or two envs)\r\n\r\nI can also spend some time going over how we are currently maintaining a test suite that runs in both 2.x and 3.x simultaneously", 
+            "title": "Supporting All Versions of Python All The Time With Tox", 
+            "meeting": 29, 
+            "slides_link": "", 
+            "length": "45", 
+            "stamp_modified": "2011-04-28 04:51:15", 
+            "embed_video": "http://carlfk.blip.tv/file/4372319", 
+            "by": 41, 
+            "stamp_created": "2011-04-28 04:51:15"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "ROS - Robot Operating System Brian Ray and Bill Mania ROS is the Robot Operating System, originally from Stanford and now supported by Willow Garage. ROS has a mature Python interface and is being used around the world by both amateur and professional roboticists. At the end of the presentation, if time allows and interest exists, some rudimentary ROS functionality will be demonstrated on a robot in progress.", 
+            "title": "ROS- Robot Operating System", 
+            "meeting": 30, 
+            "slides_link": "", 
+            "length": "45", 
+            "stamp_modified": "2011-04-28 04:58:22", 
+            "embed_video": "http://carlfk.blip.tv/file/4639302", 
+            "by": 16, 
+            "stamp_created": "2011-04-28 04:58:22"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "Deploying a Django/Pinax site on the following stack:\r\n\r\nLinux Debian Lenny Apache mod_wsgi PostgreSQL\r\n\r\nThis is the config you want to use if you don't know what you want to use. You don't need to make any choices, you don't have to do any research, and you don't even need to read the docs if you don't want to.\r\n\r\nAnd as an added bonus, I show how to wget a vm image to deploy into with network ports exposed. It is very much like working with a hosting provider like Slice Host, and it makes a great framework for testing server installs.", 
+            "title": "Django Deployment for the Average Bloke", 
+            "meeting": 30, 
+            "slides_link": "", 
+            "length": "25", 
+            "stamp_modified": "2011-04-28 04:58:22", 
+            "embed_video": "http://carlfk.blip.tv/file/4639366", 
+            "by": 43, 
+            "stamp_created": "2011-04-28 04:58:22"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "meetings.topic", 
+        "fields": {
+            "description": "I'm not sure if we're still looking for talks on Thursday, but if so, I'd like to volunteer to give a talk about using Python to do some retro-computing hacking involving my vintage 1978 Superboard II. It's not exactly robotics, but it involves hardware and a lot of low-level hacking (along with some Python3 and ZeroMQ thrown in for good measure ;-).", 
+            "title": "Vintage 1978 Superboard II hacking with some Python3 and ZeroMQ", 
+            "meeting": 30, 
+            "slides_link": "", 
+            "length": "60", 
+            "stamp_modified": "2011-04-28 04:58:22", 
+            "embed_video": "http://carlfk.blip.tv/file/4639616", 
+            "by": 20, 
+            "stamp_created": "2011-04-28 04:58:22"
+        }
+    }
+]

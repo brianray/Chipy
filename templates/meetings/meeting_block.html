@@ -1,4 +1,38 @@
 
+{% block extra_head %}
+ <script type="text/javascript">
+   window.onload = function() {
+    $('.yes').click(function() {
+         {% if not user.is_authenticated %}
+         	alert('please log in to RSVP');
+		window.location.href = '/account/login/?next=/';
+	 {% endif %}
+         $.post("/meetings/rsvp_update", {
+             answer: "yes",
+             id: this.id
+         },
+             function(data) {
+                 location.reload();
+        });
+    });
+    $('.maybe').click(function() {
+         {% if not user.is_authenticated %}
+         	alert('please log in to RSVP');
+		window.location.href = '/account/login/?next=/';
+	 {% endif %}
+         $.post("/meetings/rsvp_update", {
+             answer: "maybe",
+             id: this.id
+         },
+             function(data) {
+		 location.reload();
+        });
+    });
+}
+ </script>
+ 
+{% endblock %}
+
 {% if meetings %}
 
 	{% for meeting in meetings %}
@@ -23,7 +57,7 @@
 			<li>
 				<h3>{{topic.title}}</h3> ({{topic.get_length_display}})<br>
 				By: <i>{{topic.by}}</i><br>
-				{{topic.description}}<br>
+				{{topic.description|safe}}<br>
 				{% if topic.slides_link %}
 					<a href="{{topic.slides_link|safe}}">slides</a>
 				{% endif %}
@@ -40,15 +74,49 @@
 	{%endif%}
 </p>
 
+{%if meeting.is_future%}
+<p><b>RSVP:</b> 
+
+ <div class="rsvp_buttons">
+    {% if meeting.rsvp_user_yes %}
+        You RSVP'd as 'Yes'
+	switch to <button type="button" class="maybe" id="{{meeting.id}}">Maybe</button>
+    {% endif %}
+    {% if meeting.rsvp_user_maybe %}
+        You RSVP'd as 'Maybe'
+	switch to <button type="button" class="yes" id="{{meeting.id}}">Yes</button>
+    {% endif %}
+    {% if not meeting.rsvp_user_yes and not meeting.rsvp_user_maybe %}
+	<button type="button" class="maybe" id="{{meeting.id}}">Maybe</button>
+	<button type="button" class="yes" id="{{meeting.id}}">Yes</button>
+    {% endif %}
+     
+    <br />
+    <code id="count">{{ meeting.meetingrsvp_set.count }}</code> going so far
+  </div>  
+	
+ </p>
+{%else %}
+
+	{% ifnotequal meeting.meetingrsvp_set.count 0 %}
+
+    		<code id="count">{{ meeting.meetingrsvp_set.count }}</code> where in attendance
+	 
+	{% endifnotequal %}
+
+{%endif%}
+
+
+
     <!-- content area -->
 
    </div>
   </div>
  </div>
+
  <div class="ft"><div class="c"></div></div>
 </div>
-
-	{% endfor %}
+{% endfor %}
 {% else %}
 
 	{% if empty_msg %}
