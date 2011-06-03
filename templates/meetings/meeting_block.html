@@ -57,7 +57,7 @@
 			<li>
 				<h3>{{topic.title}}</h3> ({{topic.get_length_display}})<br>
 				By: <i>{{topic.by}}</i><br>
-				{{topic.description}}<br>
+				{{topic.description|safe}}<br>
 				{% if topic.slides_link %}
 					<a href="{{topic.slides_link|safe}}">slides</a>
 				{% endif %}
