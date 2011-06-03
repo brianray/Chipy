@@ -50,6 +50,7 @@ def do_rsvp(msg,mid,user):
                ok = False  
 	else:
             message = "Thanks for RSVP'ing for: '%s'!" % meeting
+            r.rsvp = msg
         r.save()
     else:
          message = "You must be logged in to RSVP"
