@@ -1,0 +1,3 @@
+{% load i18n %}{% load account_tags %}{% user_display post.author as author_display %}{% blocktrans with post.get_absolute_url as post_url and post.title as post_title %}{{ author_display }} has posted {{ post_title }} to their blog.
+
+http://{{ current_site }}{{ post_url }}{% endblocktrans %}

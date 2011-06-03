@@ -1,0 +1,23 @@
+{% extends "bookmarks/base.html" %}
+
+{% load i18n %}
+{% load uni_form_tags %}
+
+{% block head_title %}{% blocktrans %}Add Bookmark{% endblocktrans %}{% endblock %}
+
+
+{% block body %}
+    <h1>{% trans "Add Bookmark" %}</h1>
+    
+    <p>You can drag this '<a href="{{ bookmarklet }}">Add to {{ SITE_NAME }} Bookmarks</a>' link to your bookmark bar to post the pages you visit!</p>
+    
+    <form method="POST" action="" class="uniForm">
+        {% csrf_token %}
+        <fieldset>
+            {{ bookmark_form|as_uni_form }}
+            <div class="form_block">
+                <input type="submit" value="{% trans 'add bookmark' %}">
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

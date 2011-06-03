@@ -1,0 +1,23 @@
+This directory contains sets of common templates that are shared
+between the example projects that are supplied with Pinax.
+
+
+SUGGESTED SIMPLE USE:
+
+The settings.py must include TEMPLATE_LOADERS where "filesystem" is
+designated before "app_directories" like this:
+
+TEMPLATE_LOADERS = [
+    "django.template.loaders.filesystem.load_template_source",
+    "django.template.loaders.app_directories.load_template_source",
+]
+
+The TEMPLATE_DIRS is then set so that you pick up the project
+specific templates, the Pinax common default templates and then
+the app-specific templates defined within each installed app.
+In your settings.py file that looks like this:
+
+TEMPLATE_DIRS = [
+    os.path.join(PROJECT_ROOT, "templates"),
+    os.path.join(PINAX_ROOT, "templates", PINAX_THEME),
+]

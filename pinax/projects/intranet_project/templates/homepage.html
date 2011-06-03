@@ -1,0 +1,55 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body %}
+    
+    <h1>{% trans "Welcome to Pinax" %}</h1>
+    
+    <p>
+        {% blocktrans %}
+        <b>Pinax</b> is a <a href="http://djangoproject.com/">Django</a>
+        project intended to provide a starting point for websites. By
+        integrating numerous reusable Django apps to take care of the
+        things that many sites have in common, it lets you focus on what
+        makes your site different.
+        {% endblocktrans %}
+    </p>
+    
+    <p>
+        {% blocktrans %}
+        For more information about Pinax, see
+        <a href="http://pinaxproject.com/">http://pinaxproject.com/</a>.
+        {% endblocktrans %}
+    </p>
+    
+    <h2>{% trans "About this project" %}</h2>
+    
+    <p>
+        {% blocktrans %}
+        This project demonstrates a closed site requiring an invitation to
+        join and not exposing any information publicly. It provides a
+        top-level task tracking system, wiki and bookmarks. It is intended
+        to be the starting point of sites like intranets.
+        {% endblocktrans %}
+    </p>
+    
+    <hr />
+    <dl class="what_next">
+        <dt><a href="{% url profile_detail user.username %}">Profile</a></dt>
+        <dd>to tell the company a little about yourself.</dd>
+        
+        <dt><a href="{% url task_list %}">Tasks</a></dt>
+        <dd>to track things that need to be done and who's doing them.</dd>
+        
+        <dt><a href="{% url all_bookmarks %}">Bookmarks</a></dt>
+        <dd>to post links of relevance to the company.</dd>
+        
+        <dt><a href="{% url notification_notices %}">Notices</a></dt>
+        <dd>to configure and view notices.</dd>
+    </dl>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "swaps/base.html" %}
+
+{% load i18n %}
+{% load uni_form_tags %}
+
+{% block head_title %}{% blocktrans %}Editing Offer{% endblocktrans %}{% endblock %}
+
+{% block body %}
+    <h1>{% trans "Editing Offer" %}</h1>
+    
+    {% ifequal offer.offerer request.user %}
+        <div>
+            <form class="uniForm" id="offer_form" method="POST" action="">
+                {% csrf_token %}
+                <fieldset class="inlineLabels">
+                    {{ offer_form|as_uni_form }}
+                    <div class="form_block">
+                        <input type="hidden" name="action" value="update" />
+                        <input type="submit" value="{% trans "update" %}"/>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    {% else %}
+        <p>You are not the creator of this offer.</p>
+    {% endifequal %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "messages/base.html" %}
+
+{% load i18n %}
+{% load account_tags %}
+{% load timezone_filters %}
+
+{% block body %}
+    <h1>{% trans "Inbox" %}</h1>
+    
+    <table class="messages">
+        <thead>
+            <tr><th scope="col">{% trans "Sender" %}</th><th scope="col">{% trans "Subject" %}</th><th scope="col">{% trans "Received" %}</th><th scope="col">{% trans "Action" %}</th></tr>
+        </thead>
+        <tbody>
+            {% for message in message_list %}
+                <tr>
+                    <td scope="row">{% user_display message.sender %}</td>
+                    <td>
+                        {% if message.new %}<strong>{% endif %}
+                        {% if message.replied %}<em>{% endif %}
+                        <a href="{{ message.get_absolute_url }}">{% if message.subject.strip %}{{ message.subject }}{% else %}(none){% endif %}</a>
+                        {% if message.replied %}</em>{% endif %}
+                        {% if message.new %}</strong>{% endif %}</td>
+                    <td>{{ message.sent_at|localtime:account.timezone|date:_("DATETIME_FORMAT") }}</td>
+                    <td><a href="{% url messages_delete message.id %}">{% trans "delete" %}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+
+{% load i18n %}
+{% load uni_form_tags %}
+
+{% block head_title %}{% blocktrans %}Editing Post{% endblocktrans %}{% endblock %}
+
+{% block body %}
+    {% ifequal post.author request.user %}
+    <form class="uniForm" id="edit-profile" method="POST" action="">
+        {% csrf_token %}
+        <fieldset class="inlineLabels">
+            {{ blog_form|as_uni_form }}
+            <div class="form_block">
+            <input type="hidden" name="action" value="update" />
+            <input type="submit" value="{% trans "Update" %}"/>
+            </div>
+        </fieldset>
+    </form>
+    {% else %}
+    <p>{% trans "You are not the author of this post" %}</p>
+    {% endifequal %}
+{% endblock %}
+
+{% block extra_body %}
+    {% load jquery_validation %}
+    {% include_validation %}
+    <script type="text/javascript">
+        $(function(){
+            $('#blog_form').validate('{% url blog_form_validate %}', {type: 'table'});
+        });
+    </script>
+{% endblock %}

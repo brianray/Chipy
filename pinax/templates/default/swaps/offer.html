@@ -1,0 +1,60 @@
+{% extends "swaps/base.html" %}
+
+{% load i18n %}
+{% load humanize %}
+{% load account_tags %}
+{% load threadedcommentstags %}
+{% load tagging_tags %}
+{% load wakawaka_tags %}
+{% load theme_tags %}
+
+{% block head_title %}{% blocktrans %}Offer{% endblocktrans %} : {{ offer.short_description }}{% endblock %}
+
+
+{% block body %}
+    <div class="blog-post">
+        <h2>{{ offer.short_description }}</h2>
+        <div class="blog-meta">
+            <p>
+                Offered by: <a href="{% url profile_detail offer.offerer.username %}">{% user_display offer.offerer %}</a>
+                on {{ offer.offered_time|date }}
+            </p>
+        </div>
+        <p>Offering: {{ offer.offering|urlize }}</p>
+        <p>Want: {{ offer.want|urlize }}</p>
+        <p>State: {{ offer.get_state_display }}</p>
+        
+        <div class="blog-tags">
+            <p>
+                {% silk "tag_blue" %}
+                {% tags_for_object offer as tags %}
+                {% for tag in tags %}
+                    <a href="/tags/{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </p>
+            {% if offer.is_changeable %}
+                {% ifequal offer.offerer request.user %}
+                    <form style="display: inline;" action="{% url offer_edit offer.id %}" method="GET">
+                        <input type="hidden" name="returnto" value="offer_list_yours" />
+                        <input type="submit" value="{% trans "Edit Offer" %}" />
+                    </form>
+                    {% if offer.is_deletable %}
+                        <form style="display: inline;" action="{% url offer_delete offer.id %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="{% trans "Delete Offer" %}" />
+                        </form>
+                    {% else %}
+                        {% if offer.is_cancelable %}
+                            <form style="display: inline;" action="{% url offer_cancel offer.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="{% trans "Cancel Offer" %}" />
+                            </form>
+                        {% endif %}
+                    {% endif %}
+                {% endifequal %}
+            {% endif %}
+        </div>
+        
+    </div>
+    
+{% endblock %}
