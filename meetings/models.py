@@ -108,7 +108,7 @@ class TopicLink(models.Model):
 class MeetingRsvp(models.Model):
     
     def __unicode__(self):
-        return self.name
+        return "%s for %s" % (self.user, self.meeting)
 
     meeting = models.ForeignKey(Meeting)
     user = models.ForeignKey( User )
