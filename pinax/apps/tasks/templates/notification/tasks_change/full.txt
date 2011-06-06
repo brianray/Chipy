@@ -1,0 +1,19 @@
+{% load i18n %}{% load account_tags %}
+{% user_display user as user_display %}
+{% if group %}
+{% blocktrans %}{{ user_display }} has marked task '{{ task }}' in '{{ group }}' as {{ new_state }}.{% endblocktrans %}
+{% else %}
+{% blocktrans %}{{ user_display }} has marked task '{{ task }}' as {{ new_state }}.{% endblocktrans %}
+{% endif %}
+
+{% ifequal task.state '2' %}
+{% trans "resolution:" %} {{ task.get_resolution_display }}
+{% endifequal %}
+
+
+Task details:
+{{ task.detail }}
+
+{% blocktrans with task.tags as task_tags %}Tags: {{ task_tags }}{% endblocktrans %}
+
+Link: http://{{ current_site }}{{ task.get_absolute_url }}

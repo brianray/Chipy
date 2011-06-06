@@ -1,0 +1,14 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block body_id %}homepage{% endblock %}
+
+{% block content %}
+    <div class="primary">
+        <h2>{% trans "Not Found" %}</h2>
+        
+        <p>{% trans "We're sorry but that page could not be found." %}</p>
+        
+    </div>
+{% endblock %}

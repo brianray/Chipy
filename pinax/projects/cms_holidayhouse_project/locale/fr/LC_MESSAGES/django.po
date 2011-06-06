@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-20 00:13+0100\n"
+"PO-Revision-Date: 2010-03-04 09:27+0100\n"
+"Last-Translator: James Pic <http://jamespic.com>\n"
+"Language-Team: Pinax French <http://www.transifex.net/projects/p/pinax/team/fr/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#: templates/base.html:42
+msgid "clear"
+msgstr "effacer"
+
+#: templates/homepage.html:6
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: templates/prices.html:7 templates/site_base.html:29
+msgid "Prices"
+msgstr "Tarifs"
+
+#: templates/rooms.html:6 templates/site_base.html:28
+#, fuzzy
+msgid "Rooms"
+msgstr "Chambres"
+
+#: templates/site_base.html:18
+msgid "Logout"
+msgstr "Deconnection"
+
+#: templates/site_base.html:19
+msgid "Account"
+msgstr "Compte"
+
+#: templates/site_base.html:21
+msgid "Login"
+msgstr "Authentification"
+
+#: templates/site_base.html:27
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/site_base.html:30
+msgid "Contact"
+msgstr "Contact"
