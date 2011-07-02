@@ -38,6 +38,7 @@
 <div class="tiny_map"></div>
 <p><b>Where:</b> <span class="venue_name">{{meeting.venue.name}}</span>
 			<span class='address'>{{meeting.venue.address|safe}}</span>
+			<span class='LatLngTxt' style='visibility: hidden'></span>
 			<span class='phone'>{{meeting.venue.phone}}</span></p>
 
 <p><b>Topics:</b>
@@ -64,6 +65,9 @@
 		TBD
 	{%endif%}
 </p>
+<script type="text/javascript">
+	// geocode the address with init_mapcanvas callback
+</script>
 
     <!-- content area -->
 
