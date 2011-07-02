@@ -1,5 +1,26 @@
 
 {% if meetings %}
+	
+	{% block head_extra_stylesheets %}
+		<link rel="stylesheet" href="{{ STATIC_URL }}chipy/css/google_maps.css" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	{% endblock %}
+	
+	<script type="text/javascript">
+		var mtgmap_canvases = {};
+		var geocoder = new google.maps.Geocoder();
+		function init_mapcanvas(mapdiv,latlng) {
+			// mapdiv is s'posed to be an element object we can turn into a map
+			// latlng is s'posed to be a Google Maps APIv3 latlng object
+			var myMapOpts = {
+					zoom = 13,
+					center = latlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+			var map_canvas = new google.maps.Map(mapdiv, myMapOpts);
+			// add the marker for latlng place
+			}
+	</script>
 
 	{% for meeting in meetings %}
 
@@ -12,8 +33,12 @@
     <!-- content area -->
 
 <h1>ChiPy {{meeting.which}} Meeting</h1>
+<div class="tiny_map" id="mtgmap_{{meeting.id}}"></div>
 <p><b>When:</b> {{meeting.when|date:"l F jS Y P"}}</p>
-<p><b>Where:</b> {{meeting.venue.name}} {{meeting.venue.address|safe}} {{meeting.venue.phone}}</p>
+<div class="tiny_map"></div>
+<p><b>Where:</b> <span class="venue_name">{{meeting.venue.name}}</span>
+			<span class='address'>{{meeting.venue.address|safe}}</span>
+			<span class='phone'>{{meeting.venue.phone}}</span></p>
 
 <p><b>Topics:</b>
 	{%if meeting.topic_set.all.count %}
@@ -48,6 +73,13 @@
  <div class="ft"><div class="c"></div></div>
 </div>
 
+	<script type="text/javascript">
+	// draw each meeting location map
+	myGeoCodReq = 
+	geocoder.geocode();
+	var mapopts = {zoom: 13, center: myLatLng, mapTypeId: google.maps.MapTypeId.ROADMAP};
+	mtgmap_canvases["{{meeting.id}}"] = new google.maps.Map(mtgmap_{{meeting.id}}, mapopts);
+	
 	{% endfor %}
 {% else %}
 

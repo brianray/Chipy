@@ -6,14 +6,14 @@ $(function() {
 	  var myLatLng = new google.maps.LatLng(_geo[0][0],_geo[0][1]);
   } else {
 	  var myLatLng = Ravenswood;
-  }
+  };
   
   var myCanvas = document.getElementById("map_canvas");
   var myMapOpts = {
 	  zoom: 12,
 	  center: myLatLng,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
+  };
   var map_canvas = new google.maps.Map(myCanvas, myMapOpts);
 
   // Add markers to the map_canvas from the _geo array of points

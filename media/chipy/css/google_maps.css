@@ -5,3 +5,12 @@ div#map_canvas {
 	width: 400px;
 	float: right
 	}
+
+div.tiny_map {
+	height: 120px;
+	width: 120px;
+	}
+
+div.s div.tiny_map {
+	float: right;
+	}
