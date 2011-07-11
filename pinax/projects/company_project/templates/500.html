@@ -1,0 +1,14 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block body_id %}homepage{% endblock %}
+
+{% block content %}
+    <div class="primary">
+        <h2>{% trans "Server Error" %}</h2>
+        
+        <p>{% trans "We're sorry but a server error has occurred. We've been notified and will look into it as soon as possible." %}</p>
+        
+    </div>
+{% endblock %}

@@ -1,0 +1,73 @@
+/* GENERAL TAB STYLING */
+
+#tabhead {
+    background-color: #666;
+}
+
+#tabhead a:link,
+#tabhead a:visited
+{
+    display: inline-block;
+    color: White;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 1em 2em;
+    background-color: #333;
+    line-height: 1em;
+    border-left: 1px solid #777;
+    border-right: 1px solid #444;
+}
+
+#tabhead a:hover,
+#tabhead a:active
+{
+    background-color: #000;
+    border-color: #666;
+    color: #FFF;
+}
+
+/* account tabs (right side) */
+#tabhead a.tab_account,
+#tabhead a.tab_login,
+#tabhead a.tab_logout
+{
+    float: right;
+    opacity: 0.5;
+}
+
+
+/* SUBNAV */
+
+#subnav{
+    background-color: #666;
+}
+
+#subnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#subnav ul li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+#subnav a:link,
+#subnav a:visited
+{
+    display: inline-block;
+    color: White;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.7em;
+    line-height: 1em;
+    padding: 0.5em 1em;
+    background-color: #666;
+}
+
+#subnav a:hover {
+    text-decoration: underline;
+}

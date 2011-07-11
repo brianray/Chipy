@@ -110,6 +110,7 @@ MIDDLEWARE_CLASSES = [
     "django_sorting.middleware.SortingMiddleware",
     "pinax.middleware.security.HideSensistiveFieldsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "meetings.meeting_threadlocal.ThreadLocalMiddleware",
 ]
 
 ROOT_URLCONF = "urls"

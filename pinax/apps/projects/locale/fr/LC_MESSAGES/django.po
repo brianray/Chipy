@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is disprojetted under the same license as the PACKAGE package.
+# Frédéric Roland <frederic.roland@creativeconvergence.be>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: v1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-02 19:27+0100\n"
+"PO-Revision-Date: 2010-03-01 14:24+0100\n"
+"Last-Translator: James Pic <http://jamespic.com/>\n"
+"Language-Team: Pinax Team <http://www.transifex.net/projects/p/pinax/team/fr/"
+">\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: forms.py:23
+msgid ""
+"a short version of the name consisting only of letters, numbers, underscores "
+"and hyphens."
+msgstr ""
+"une version abrégée du nom qui ne peut contenir que des lettres, des "
+"chiffres ou des caractères de soulignement."
+
+#: forms.py:28
+msgid "A project already exists with that slug."
+msgstr "Un projet existe déjà sous ce nom abrégé."
+
+#: forms.py:33 forms.py:51
+msgid "A project already exists with that name."
+msgstr "Un projet existe déjà sous ce nom."
+
+#: forms.py:61
+msgid "User"
+msgstr "Utilisateur"
+
+#: forms.py:71
+msgid "There is no user with this username."
+msgstr "Il n'y a pas d'utilisateur avec ce nom d'utilisateur."
+
+#: forms.py:74
+msgid "User is already a member of this project."
+msgstr "L'utilisateur est déjà membre de ce projet"
+
+#: management.py:11
+msgid "New Project Member"
+msgstr "Nouveau Membre du Projet"
+
+#: management.py:11
+msgid "a project you are a member of has a new member"
+msgstr "un projet dont vous êtes membre a un nouveau membre"
+
+#: management.py:12
+msgid "New Member Of Project You Created"
+msgstr "Nouveau membre d'un projet que vous avez créé"
+
+#: management.py:12
+msgid "a project you created has a new member"
+msgstr "un nouveau membre a rejoint un projet que vous avez créé"
+
+#: management.py:13
+msgid "New Project Created"
+msgstr "Nouveau Projet Créée"
+
+#: management.py:13
+msgid "a new project has been created"
+msgstr "une nouveau projet a été créée"
+
+#: management.py:14
+msgid "Added as a Project Member"
+msgstr "Ajouté en tant que membre du projet"
+
+#: management.py:14
+msgid "you have become member of a project"
+msgstr "vous avez été ajouté à un projet"
+
+#: models.py:17
+msgid "members"
+msgstr "membres"
+
+#: models.py:21
+msgid "private"
+msgstr "privé"
+
+#: models.py:40
+msgid "project"
+msgstr "projet"
+
+#: models.py:44
+msgid "user"
+msgstr "utilisateur"
+
+#: models.py:46
+msgid "away"
+msgstr "parti"
+
+#: models.py:47
+msgid "away_message"
+msgstr "away_message"
+
+#: models.py:48
+msgid "away since"
+msgstr "parti depuis"
+
+#: views.py:94
+#, python-format
+msgid "Project %(project_name)s deleted."
+msgstr "Projet %(project_name)s effacé."
+
+#: views.py:141
+#, python-format
+msgid "added %(user)s to project"
+msgstr "%(user)s ajouté au projet"
