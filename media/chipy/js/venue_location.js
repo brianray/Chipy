@@ -1,10 +1,10 @@
 
-function mapVenue(mtgLatLng) {
-  var canvas = document.getElementById("map_canvas_mtg");
+function mapVenue(venueLatLng) {
+  var canvas = document.getElementById("map_canvas_venue");
   var mapOpts = {
 	  zoom: 12,
       draggable: false,
-	  center: mtgLatLng,
+	  center: venueLatLng,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
       scaleControl: false,
@@ -14,7 +14,7 @@ function mapVenue(mtgLatLng) {
   var mapCanvas = new google.maps.Map(canvas, mapOpts);
   var markerOpts = {
       map: mapCanvas,
-      position: mtgLatLng
+      position: venueLatLng
   };
   var map_marker = new google.maps.Marker(markerOpts);
 };
