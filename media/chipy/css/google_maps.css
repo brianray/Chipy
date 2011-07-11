@@ -5,3 +5,9 @@ div#map_canvas {
 	width: 400px;
 	float: right
 	}
+
+div.google_map {
+    float: right;
+    height: 192px;
+    width: 256px;
+}

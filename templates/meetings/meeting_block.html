@@ -1,5 +1,8 @@
 
 {% block extra_head %}
+ <link rel="stylesheet" href="/site_media/static/chipy/css/google_maps.css" />
+ <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+ <script type="text/javascript" src="/site_media/static/chipy/js/venue_location.js"></script>
  <script type="text/javascript">
    window.onload = function() {
     $('.yes').click(function() {
@@ -48,6 +51,20 @@
 <h1>ChiPy {{meeting.which}} Meeting</h1>
 <p><b>When:</b> {{meeting.when|date:"l F jS Y P"}}</p>
 <p><b>Where:</b> {{meeting.venue.name}} {{meeting.venue.address|safe}} {{meeting.venue.phone}}</p>
+
+<div id="map_canvas_mtg" class="google_map"></div>
+<script type="text/javascript">
+  var geocoder = new google.maps.Geocoder();
+  var address = "{{meeting.venue.address|safe}}"
+  if (address) {
+    geocoder.geocode({address: address},
+      function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          mapVenue(results[0].geometry.location);
+        }
+    })
+  }
+</script>
 
 <p><b>Topics:</b>
 	{%if meeting.topic_set.all.count %}
