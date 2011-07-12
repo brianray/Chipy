@@ -1,6 +1,6 @@
 var geocoder = new google.maps.Geocoder();
 
-function mapVenue(mapdiv,venueLatLng) {
+function drawMapThumb(mapdiv,address,label) {
   var canvas = mapdiv;
   var mapOpts = {
 	  zoom: 12,
@@ -12,10 +12,21 @@ function mapVenue(mapdiv,venueLatLng) {
       scrollWheel: false,
       streetViewControl: false
   };
+    
   var mapCanvas = new google.maps.Map(canvas, mapOpts);
   var markerOpts = {
       map: mapCanvas,
-      position: venueLatLng
+      position: venueLatLng,
+      title: label
   };
   var map_marker = new google.maps.Marker(markerOpts);
 };
+
+function geocodeCatcher(results,status) {
+  // puke if status is not happiness
+  // otherwise call drawMapThumb
+}
+
+function mapVenue(mapdiv,address,label) {
+  geocoder.Geocode(stuff);
+}
