@@ -43,22 +43,6 @@
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	{% endblock %}
 	
-	<script type="text/javascript">
-		var mtgmap_canvases = {};
-		var geocoder = new google.maps.Geocoder();
-		function init_mapcanvas(mapdiv,latlng) {
-			// mapdiv is s'posed to be an element object we can turn into a map
-			// latlng is s'posed to be a Google Maps APIv3 latlng object
-			var myMapOpts = {
-					zoom = 13,
-					center = latlng,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				};
-			var map_canvas = new google.maps.Map(mapdiv, myMapOpts);
-			// add the marker for latlng place
-			}
-	</script>
-
 	{% for meeting in meetings %}
 
 <div class="dialog">
@@ -79,18 +63,6 @@
 			<span class='phone'>{{meeting.venue.phone}}</span></p>
 
 <div id="map_canvas_mtg" class="google_map"></div>
-<script type="text/javascript">
-  var geocoder = new google.maps.Geocoder();
-  var address = "{{meeting.venue.address|safe}}"
-  if (address) {
-    geocoder.geocode({address: address},
-      function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          mapVenue(results[0].geometry.location);
-        }
-    })
-  }
-</script>
 
 <p><b>Topics:</b>
 	{%if meeting.topic_set.all.count %}

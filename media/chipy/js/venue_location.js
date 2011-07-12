@@ -1,6 +1,7 @@
+var geocoder = new google.maps.Geocoder();
 
-function mapVenue(venueLatLng) {
-  var canvas = document.getElementById("map_canvas_venue");
+function mapVenue(mapdiv,venueLatLng) {
+  var canvas = mapdiv;
   var mapOpts = {
 	  zoom: 12,
       draggable: false,
