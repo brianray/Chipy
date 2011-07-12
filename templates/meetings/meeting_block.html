@@ -162,19 +162,7 @@
 
  <div class="ft"><div class="c"></div></div>
 </div>
-<<<<<<< HEAD
-
-	<script type="text/javascript">
-	// draw each meeting location map
-	myGeoCodReq = 
-	geocoder.geocode();
-	var mapopts = {zoom: 13, center: myLatLng, mapTypeId: google.maps.MapTypeId.ROADMAP};
-	mtgmap_canvases["{{meeting.id}}"] = new google.maps.Map(mtgmap_{{meeting.id}}, mapopts);
-	
-	{% endfor %}
-=======
 {% endfor %}
->>>>>>> 3009a84918ec2665bb398e3912790863a9403748
 {% else %}
 
 	{% if empty_msg %}
