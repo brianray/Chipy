@@ -65,7 +65,9 @@
 <div id="map_canvas_mtg" class="google_map"></div>
 
 <script type="text/javascript">
-
+mapVenue(getElementById("mtgmap_{{meeting.id}}"),
+    "{{meeting.venue.address|safe}}",
+    "{{meeting.venue.name}}");
 </script>
 
 <p><b>Topics:</b>
