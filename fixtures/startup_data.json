@@ -9,7 +9,9 @@
             "address": "1900 N AUSTIN AVE,  CHICAGO,  IL  60639-5010", 
             "directions": "", 
             "embed_map": "", 
-            "email": ""
+            "email": "",
+            "latitude": 41.914731,
+            "longitude": -87.775358
         }
     }, 
     {
