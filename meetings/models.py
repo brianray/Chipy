@@ -16,8 +16,8 @@ class Venue(models.Model):
     email = models.EmailField(max_length=MAX_LENGTH,blank=True,null=True)
     phone = models.CharField(max_length=MAX_LENGTH,blank=True,null=True)
     address = models.TextField(blank=True,null=True)
-    longitude = models.DecimalField(max_digits=17, decimal_places=15,null=True)
-    latitude = models.DecimalField(max_digits=17, decimal_places=15,null=True)
+    longitude = models.FloatField(null=True)
+    latitude = models.FloatField(null=True)
 
     @property
     def jsonLatLng(self):
