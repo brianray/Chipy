@@ -18,7 +18,9 @@ class Venue(models.Model):
     address = models.TextField(blank=True,null=True)
     longitude = models.DecimalField(max_digits=17, decimal_places=15,null=True)
     latitude = models.DecimalField(max_digits=17, decimal_places=15,null=True)
-    def jsonLatLng():
+
+    @property
+    def jsonLatLng(self):
         '''
         Use the string returned as args for google.maps.LatLng constructor.
 	'''
@@ -26,6 +28,7 @@ class Venue(models.Model):
             return "%d,%d" % (self.latitude,self.longitude)
         else:
             return None
+    
     directions = models.TextField(blank=True,null=True)
     embed_map = models.TextField(blank=True,null=True)
     link = models.URLField(verify_exists=True, blank=True, null=True)
