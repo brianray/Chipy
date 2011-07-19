@@ -10,7 +10,7 @@
             "directions": "", 
             "embed_map": "", 
             "email": "",
-            "latitude": 41.914731,
+	    "latitude": 41.914731,
             "longitude": -87.775358
         }
     }, 
