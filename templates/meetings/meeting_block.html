@@ -59,13 +59,13 @@
 <div class="tiny_map"></div>
 <p><b>Where:</b> <span class="venue_name">{{meeting.venue.name}}</span>
 			<span class='address'>{{meeting.venue.address|safe}}</span>
-			<span class='LatLngTxt' style='visibility: hidden'>{{meeting.venue.jsonLatLng()}}</span>
+			<span class='LatLngTxt' style='visibility: hidden'>{{meeting.venue.jsonLatLng}}</span>
 			<span class='phone'>{{meeting.venue.phone}}</span></p>
 
 <div id="map_canvas_mtg" class="google_map"></div>
 
 <script type="text/javascript">
-if ({{meeting.venue.jsonLatLng()|safe}}) {
+if ({{meeting.venue.jsonLatLng|0}}) {
 	drawMapThumb(	document.getElementById("mtgmap_{{meeting.id}}"),
 			"{{meeting.venue.jsonLatLng()|safe}}",
 			"{{meeting.venue.name}}");
