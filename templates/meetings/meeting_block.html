@@ -65,7 +65,7 @@
 <div id="map_canvas_mtg" class="google_map"></div>
 
 <script type="text/javascript">
-if ({{meeting.venue.jsonLatLng|0}}) {
+if ({{meeting.venue.jsonLatLng|safe}}) {
 	drawMapThumb(	document.getElementById("mtgmap_{{meeting.id}}"),
 			"{{meeting.venue.jsonLatLng()|safe}}",
 			"{{meeting.venue.name}}");
