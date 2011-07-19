@@ -25,7 +25,7 @@ class Venue(models.Model):
         Use the string returned as args for google.maps.LatLng constructor.
 	'''
         if self.latitude != None and self.longitude != None:
-            return "%d,%d" % (self.latitude,self.longitude)
+            return "%.6f,%.6f" % (self.latitude,self.longitude)
         else:
             return None
     
