@@ -67,7 +67,7 @@
 <script type="text/javascript">
 if ({{meeting.venue.jsonLatLng|safe}}) {
 	drawMapThumb(	document.getElementById("mtgmap_{{meeting.id}}"),
-			"{{meeting.venue.jsonLatLng()|safe}}",
+			"{{meeting.venue.jsonLatLng|safe}}",
 			"{{meeting.venue.name}}");
 }
 </script>
