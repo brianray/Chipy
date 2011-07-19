@@ -37,7 +37,12 @@
 {% endblock %}
 
 {% if meetings %}
-
+	
+	{% block head_extra_stylesheets %}
+		<link rel="stylesheet" href="{{ STATIC_URL }}chipy/css/google_maps.css" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	{% endblock %}
+	
 	{% for meeting in meetings %}
 
 <div class="dialog">
@@ -49,21 +54,20 @@
     <!-- content area -->
 
 <h1>ChiPy {{meeting.which}} Meeting</h1>
+<div class="tiny_map" id="mtgmap_{{meeting.id}}"></div>
 <p><b>When:</b> {{meeting.when|date:"l F jS Y P"}}</p>
-<p><b>Where:</b> {{meeting.venue.name}} {{meeting.venue.address|safe}} {{meeting.venue.phone}}</p>
+<div class="tiny_map"></div>
+<p><b>Where:</b> <span class="venue_name">{{meeting.venue.name}}</span>
+			<span class='address'>{{meeting.venue.address|safe}}</span>
+			<span class='LatLngTxt' style='visibility: hidden'></span>
+			<span class='phone'>{{meeting.venue.phone}}</span></p>
 
 <div id="map_canvas_mtg" class="google_map"></div>
+
 <script type="text/javascript">
-  var geocoder = new google.maps.Geocoder();
-  var address = "{{meeting.venue.address|safe}}"
-  if (address) {
-    geocoder.geocode({address: address},
-      function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          mapVenue(results[0].geometry.location);
-        }
-    })
-  }
+drawMapThumb(document.getElementById("mtgmap_{{meeting.id}}"),
+    "{{meeting.venue.address|safe}}",
+    "{{meeting.venue.name}}");
 </script>
 
 <p><b>Topics:</b>
@@ -90,6 +94,9 @@
 		TBD
 	{%endif%}
 </p>
+<script type="text/javascript">
+	// geocode the address with init_mapcanvas callback
+</script>
 
 {%if meeting.is_future%}
 <p><b>RSVP:</b> 
