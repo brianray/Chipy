@@ -5,8 +5,6 @@ div#map_canvas {
 	width: 400px;
 	float: right
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 div.tiny_map {
 	height: 120px;
@@ -16,13 +14,9 @@ div.tiny_map {
 div.s div.tiny_map {
 	float: right;
 	}
-=======
->>>>>>> test
-=======
 
 div.google_map {
     float: right;
     height: 192px;
     width: 256px;
 }
->>>>>>> 3009a84918ec2665bb398e3912790863a9403748
