@@ -2,3 +2,5 @@ local_settings.py
 *.pyc
 *.pyo
 .DS_Store
+#*
+*#
