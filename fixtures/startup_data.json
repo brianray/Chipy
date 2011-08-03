@@ -4,9 +4,11 @@
         "model": "meetings.venue", 
         "fields": {
             "name": "SMS", 
+            "longitude": -87.775357999999997, 
             "phone": "(773) 491-6718", 
             "link": "", 
             "address": "1900 N AUSTIN AVE,  CHICAGO,  IL  60639-5010", 
+            "latitude": 41.914731000000003, 
             "directions": "", 
             "embed_map": "", 
             "email": "",
@@ -19,9 +21,11 @@
         "model": "meetings.venue", 
         "fields": {
             "name": "Imaginary Landscapes, LLC.", 
+            "longitude": -87.674627000000001, 
             "phone": "", 
             "link": "", 
             "address": "5121 N Ravenswood Avenue  Chicago, IL 60640", 
+            "latitude": 41.975073999999999, 
             "directions": "", 
             "embed_map": "", 
             "email": ""
@@ -32,9 +36,11 @@
         "model": "meetings.venue", 
         "fields": {
             "name": "Axciom Corp.", 
+            "longitude": -88.025135000000006, 
             "phone": "", 
             "link": "", 
             "address": " 1501 Opus Place, Downers Grove, IL 60515", 
+            "latitude": 41.829171000000002, 
             "directions": "", 
             "embed_map": "", 
             "email": ""
@@ -45,9 +51,11 @@
         "model": "meetings.venue", 
         "fields": {
             "name": "ITA", 
+            "longitude": -87.636752000000001, 
             "phone": "312.435.2805", 
             "link": "", 
             "address": "15th Floor 200 S. Wacker Drive Chicago, IL 60606", 
+            "latitude": 41.879432000000001, 
             "directions": "", 
             "embed_map": "", 
             "email": ""
