@@ -27,13 +27,3 @@ function drawMapThumb(mapdiv,venueLatLng,label) {
   };
   var map_marker = new google.maps.Marker(markerOpts);
 };
-
-function mapVenue(mapdiv,address,label) {
-  geocoder.geocode( { 'address': address}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            // do the drawmapThumb() call to make sparkles
-        } else {
-            alert("Geocode was not successful for the following reason: " + status);
-        }
-      });
-}
