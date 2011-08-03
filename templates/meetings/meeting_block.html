@@ -63,6 +63,7 @@
 
 <div id="map_canvas_mtg" class="google_map"></div>
 
+{% if meeting.venue.jsonLatLng %}
 <script type="text/javascript">
 if ({{meeting.venue.jsonLatLng|safe}}) {
 	latlng = new google.maps.LatLng({{meeting.venue.jsonLatLng}});
@@ -71,6 +72,7 @@ if ({{meeting.venue.jsonLatLng|safe}}) {
 			"{{meeting.venue.name}}");
 }
 </script>
+{% endif %}
 
 <p><b>Topics:</b>
 	{%if meeting.topic_set.all.count %}
