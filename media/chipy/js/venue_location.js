@@ -1,6 +1,6 @@
 var geocoder = new google.maps.Geocoder();
 
-function drawMapThumb(mapdiv,venueLatLng,label) {
+function drawMapThumb(mapdiv, venueLatLng, label, address) {
   var mapOpts = {
 	zoom: 12,
 	draggable: false,
@@ -18,7 +18,14 @@ function drawMapThumb(mapdiv,venueLatLng,label) {
   var markerOpts = {
       map: mapCanvas,
       position: venueLatLng,
+      clickable: true,
       title: label
   };
   var map_marker = new google.maps.Marker(markerOpts);
+  var google_maps_url = "http://maps.google.com/maps?q=" + address + "&sll=" + venueLatLng + "&z=16"
+  google.maps.event.addListener(map_marker, 'click', function() {
+      window.open(google_maps_url);
+  });
 };
+
+

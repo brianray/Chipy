@@ -65,7 +65,8 @@ if ({{meeting.venue.jsonLatLng|safe}}) {
 	latlng = new google.maps.LatLng({{meeting.venue.jsonLatLng}});
 	drawMapThumb(document.getElementById("mtgmap_{{ meeting.id }}"),
 			latlng,
-			"{{meeting.venue.name}}");
+			"{{meeting.venue.name}}",
+            "{{ meeting.venue.address }}");
 }
 </script>
 {% endif %}
