@@ -7,16 +7,11 @@ div#map_canvas {
 	}
 
 div.tiny_map {
-	height: 120px;
-	width: 120px;
+	height: 192px;
+	width: 256px;
 	}
 
 div.s div.tiny_map {
 	float: right;
 	}
 
-div.google_map {
-    float: right;
-    height: 192px;
-    width: 256px;
-}

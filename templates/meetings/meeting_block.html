@@ -39,7 +39,6 @@
 {% if meetings %}
 	
 	{% block head_extra_stylesheets %}
-		<link rel="stylesheet" href="{{ STATIC_URL }}chipy/css/google_maps.css" />
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	{% endblock %}
 	
@@ -54,20 +53,17 @@
     <!-- content area -->
 
 <h1>ChiPy {{meeting.which}} Meeting</h1>
-<div class="tiny_map" id="mtgmap_{{meeting.id}}"></div>
 <p><b>When:</b> {{meeting.when|date:"l F jS Y P"}}</p>
-<div class="tiny_map"></div>
 <p><b>Where:</b> <span class="venue_name">{{meeting.venue.name}}</span>
 			<span class='address'>{{meeting.venue.address|safe}}</span>
 			<span class='phone'>{{meeting.venue.phone}}</span></p>
 
-<div id="map_canvas_mtg" class="google_map"></div>
-
 {% if meeting.venue.jsonLatLng %}
+<div id="mtgmap_{{ meeting.id }}" class="tiny_map"></div>
 <script type="text/javascript">
 if ({{meeting.venue.jsonLatLng|safe}}) {
 	latlng = new google.maps.LatLng({{meeting.venue.jsonLatLng}});
-	drawMapThumb(	document.getElementById("mtgmap_{{meeting.id}}"),
+	drawMapThumb(document.getElementById("mtgmap_{{ meeting.id }}"),
 			latlng,
 			"{{meeting.venue.name}}");
 }
