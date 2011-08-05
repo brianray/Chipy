@@ -61,13 +61,11 @@
 {% if meeting.venue.jsonLatLng %}
 <div id="mtgmap_{{ meeting.id }}" class="tiny_map"></div>
 <script type="text/javascript">
-if ({{meeting.venue.jsonLatLng|safe}}) {
-	latlng = new google.maps.LatLng({{meeting.venue.jsonLatLng}});
-	drawMapThumb(document.getElementById("mtgmap_{{ meeting.id }}"),
-			latlng,
-			"{{meeting.venue.name}}",
-            "{{ meeting.venue.address }}");
-}
+  latLng = new google.maps.LatLng({{meeting.venue.jsonLatLng}});
+  drawMapThumb(document.getElementById("mtgmap_{{ meeting.id }}"),
+  	           latLng,
+               "{{ meeting.venue.name }}",
+               "{{ meeting.venue.address }}");
 </script>
 {% endif %}
 
