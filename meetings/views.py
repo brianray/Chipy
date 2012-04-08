@@ -78,7 +78,7 @@ def topics_json(request, meeting):
         topics.append({'title' : topic.title,
         'presenter' : topic.by.name,
         'contact_email' : topic.by.email,
-        'start_time' : '00:00:00',
+        'start_time' : meeting.when.isoformat(),
         'duration' : topic.length,
         'description': topic.description,
         'released' : True,
