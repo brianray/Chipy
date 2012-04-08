@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     url(r'^embed_video/(?P<id>\d+)/$', embed_video, {},'embed_video'),
     (r'^rsvp_update$', 'meetings.views.rsvp_update'),
     (r'^rsvp/(?P<mid>\d+)/(?P<msg>.+)$', 'meetings.views.rsvp'),
+    url(r'(?P<meeting>\d+)/topics.json', topics_json, name="topics.json"),
 )

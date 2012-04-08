@@ -54,7 +54,7 @@ class Meeting(models.Model):
     stamp_modified = models.DateTimeField(auto_now=True)
     
     def is_future(self):
- 	return bool( self.when >=  ( datetime.datetime.now()-settings.LATE_ARRIVAL_OFFSET ) )
+        return bool( self.when >=  ( datetime.datetime.now()-settings.LATE_ARRIVAL_OFFSET ) )
  
 
     def rsvp_user_yes(self):
