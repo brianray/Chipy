@@ -76,9 +76,9 @@ def topics_json(request, meeting):
     topics = []
     for topic in meeting.topic_set.all():
         topics.append({'title' : topic.title,
-        'presenter' : topic.by.name,
-        'contact_email' : topic.by.email,
-        'start_time' : meeting.when.isoformat(),
+        'presenter' : topic.by.name if topic.by else '',
+        'contact_email' : topic.by.email if topic.by else '',
+        'start_time' : topic.start_time.isoformat() if topic.start_time else '',
         'duration' : topic.length,
         'description': topic.description,
         'released' : True,
