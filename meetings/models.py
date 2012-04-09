@@ -101,6 +101,7 @@ class Topic(models.Model):
     embed_video = models.TextField(blank=True,null=True)
     description = models.TextField(blank=True,null=True)
     slides_link = models.URLField(verify_exists=True, blank=True, null=True)
+    start_time = models.DateTimeField(blank = True, null = True)
 
     stamp_created = models.DateTimeField(auto_now_add=True)
     stamp_modified = models.DateTimeField(auto_now=True)
