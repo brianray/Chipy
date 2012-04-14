@@ -54,7 +54,7 @@ class Meeting(models.Model):
     stamp_modified = models.DateTimeField(auto_now=True)
     
     def is_future(self):
- 	return bool( self.when >=  ( datetime.datetime.now()-settings.LATE_ARRIVAL_OFFSET ) )
+        return bool( self.when >=  ( datetime.datetime.now()-settings.LATE_ARRIVAL_OFFSET ) )
  
 
     def rsvp_user_yes(self):
@@ -101,6 +101,7 @@ class Topic(models.Model):
     embed_video = models.TextField(blank=True,null=True)
     description = models.TextField(blank=True,null=True)
     slides_link = models.URLField(verify_exists=True, blank=True, null=True)
+    start_time = models.DateTimeField(blank = True, null = True)
 
     stamp_created = models.DateTimeField(auto_now_add=True)
     stamp_modified = models.DateTimeField(auto_now=True)

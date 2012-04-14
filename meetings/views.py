@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from meetings.models import MeetingRsvp, Meeting
 from datetime import *
 from django.contrib import messages
+import simplejson
 
 def embed_video(request,id):
     topic = get_object_or_404(Topic, pk=id)
@@ -70,4 +71,18 @@ def rsvp_update(request):
 
     return HttpResponse(str(ok))
 
+def topics_json(request, meeting):
+    meeting = get_object_or_404(Meeting, pk=meeting)
+    topics = []
+    for topic in meeting.topic_set.all():
+        topics.append({'title' : topic.title,
+        'presenter' : topic.by.name if topic.by else '',
+        'contact_email' : topic.by.email if topic.by else '',
+        'start_time' : topic.start_time.isoformat() if topic.start_time else '',
+        'duration' : topic.length,
+        'description': topic.description,
+        'released' : True,
+        })
+
+    return HttpResponse(simplejson.dumps(topics), mimetype="application/json")
 
