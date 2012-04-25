@@ -55,7 +55,6 @@ class Meeting(models.Model):
     
     def is_future(self):
         return bool( self.when >=  ( datetime.datetime.now()-settings.LATE_ARRIVAL_OFFSET ) )
- 
 
     def rsvp_user_yes(self):
     	return self.meetingrsvp_set.filter(user=get_current_user(),rsvp='yes').count() != 0
@@ -90,12 +89,13 @@ class Topic(models.Model):
 
     def __unicode__(self):
 	out = self.title
-	if self.by:
-	    out += "By: %s" % self.by.name
+	#if self.by:
+	#    out += "By: %s" % self.by.name
 	return out
 
     title = models.CharField(max_length=MAX_LENGTH)
-    by = models.ForeignKey(Presentor,blank=True,null=True)
+    #by = models.ForeignKey(Presentor,blank=True,null=True)
+    presentors = models.ManyToManyField(Presentor)
     meeting = models.ForeignKey( Meeting, blank=True, null=True)
     length = models.CharField(max_length=4,choices=LENGTH_CODES)
     embed_video = models.TextField(blank=True,null=True)
@@ -105,7 +105,10 @@ class Topic(models.Model):
 
     stamp_created = models.DateTimeField(auto_now_add=True)
     stamp_modified = models.DateTimeField(auto_now=True)
-
+    
+    def presentor_names(self):
+      print self.presentors.all()
+      return ", ".join(map(lambda p: p.name, self.presentors.all())) #I imagine this would cause a n+1, not sure how to prefetch many-to-many
 
 class TopicLink(models.Model):
     

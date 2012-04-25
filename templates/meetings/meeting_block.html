@@ -71,6 +71,7 @@
 </script>
 {% endif %}
 
+{% load meetings_extra %}
 <p><b>Topics:</b>
 	{%if meeting.topic_set.all.count %}
 
@@ -78,7 +79,7 @@
 		{%for topic in meeting.topic_set.all%}
 			<li>
 				<h3>{{topic.title}}</h3> ({{topic.get_length_display}})<br>
-				By: <i>{{topic.by}}</i><br>
+				By: <i>{{topic.presentor_names}}</i><br>
 				{{topic.description|safe}}<br>
 				{% if topic.slides_link %}
 					<a href="{{topic.slides_link|safe}}">slides</a>
