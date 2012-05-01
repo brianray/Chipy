@@ -7,6 +7,8 @@ from meetings.models import MeetingRsvp, Meeting
 from datetime import *
 from django.contrib import messages
 import simplejson
+import vobject
+import datetime
 
 def embed_video(request,id):
     topic = get_object_or_404(Topic, pk=id)
@@ -70,6 +72,20 @@ def rsvp_update(request):
     	messages.error(request, message)
 
     return HttpResponse(str(ok))
+ 
+def download_calendar(request):
+  cal = vobject.iCalendar()
+  future_meetings = Meeting.objects.filter(when__gt=datetime.datetime.now())
+  for meeting in future_meetings:
+    ev = cal.add('vevent')
+    ev.add('summary').value = 'Chipy Meeting'
+    ev.add('description').value = '\n'.join(map(lambda x : x.title, meeting.topic_set.all()))
+    ev.add('location').value = meeting.venue.name
+    ev.add('dtstart').value = meeting.when
+
+  response = HttpResponse(cal.serialize(), content_type='text/calendar', mimetype='text/calendar')
+  response['Content-Disposition'] = 'attachment; filename=chipy_calendar.ics;'
+  return response
 
 def topics_json(request, meeting):
     meeting = get_object_or_404(Meeting, pk=meeting)

@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     (r'^rsvp_update$', 'meetings.views.rsvp_update'),
     (r'^rsvp/(?P<mid>\d+)/(?P<msg>.+)$', 'meetings.views.rsvp'),
     url(r'(?P<meeting>\d+)/topics.json', topics_json, name="topics.json"),
+    (r'^download_calendar$', 'meetings.views.download_calendar'),
 )
