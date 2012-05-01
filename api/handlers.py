@@ -9,12 +9,10 @@ class MeetingHandler(BaseHandler):
   def read(self, request, meeting_id=None):
     base = Meeting.objects
     if meeting_id:
-      meeting_json = []
-      meeting = base.get(pk=meeting_id)
-      meeting_json.append({'meeting': meeting, 'topics': meeting.topic_set.all()})
-      return meeting_json
+      print(meeting_id)
+      return base.get(pk=meeting_id) 
     else:
-      return Meeting.objects.all()
+      return base.all()
 
 class PresentorHandler(BaseHandler):
   allowed_methods = ('GET',)
