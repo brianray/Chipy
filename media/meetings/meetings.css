@@ -37,6 +37,7 @@
  margin:0px 8px 0px 4px;
  background:#000 url(/site_media/static/meetings/box/ms.jpg) repeat-x 0px 0px;
  padding:1em;
+ min-height: 275px;
 }
 
 .dialog .ft {

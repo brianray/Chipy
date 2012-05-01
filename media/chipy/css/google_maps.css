@@ -5,13 +5,20 @@ div#map_canvas {
 	width: 400px;
 	float: right
 	}
-
+.mapWrapper {
+  margin-top: 35px;
+	height: 184px;
+	width: 260px;
+  float: right;
+  background-color: gray; 
+  float:right;
+}
 div.tiny_map {
-	height: 192px;
+	height: 180px;
 	width: 256px;
+  margin: 2px;
 	}
 
 div.s div.tiny_map {
-	float: right;
 	}
 

@@ -59,7 +59,9 @@
 			<span class='phone'>{{meeting.venue.phone}}</span></p>
 
 {% if meeting.venue.jsonLatLng %}
-<div id="mtgmap_{{ meeting.id }}" class="tiny_map"></div>
+<div class="mapWrapper">
+  <div id="mtgmap_{{ meeting.id }}" class="tiny_map"></div>
+</div>
 <script type="text/javascript">
   latLng = new google.maps.LatLng({{meeting.venue.jsonLatLng}});
   drawMapThumb(document.getElementById("mtgmap_{{ meeting.id }}"),
