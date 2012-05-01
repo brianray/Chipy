@@ -207,7 +207,7 @@ INSTALLED_APPS = [
     # project
     #"about",
     "meetings",
-
+    "piston"
 ]
 
 FIXTURE_DIRS = [

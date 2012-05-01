@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
 
 import meetings
+import api
 from django.contrib import admin
 admin.autodiscover()
 
@@ -69,6 +70,7 @@ urlpatterns = patterns("",
     url(r"^feeds/tweets/(.*)/$", "django.contrib.syndication.views.feed", tweets_feed_dict),
     url(r"^feeds/posts/(.*)/$", "django.contrib.syndication.views.feed", blogs_feed_dict),
     url(r"^feeds/bookmarks/(.*)/?$", "django.contrib.syndication.views.feed", bookmarks_feed_dict),
+    url(r"^api/", include('api.urls')), 
 )
 
 ## @@@ for now, we'll use friends_app to glue this stuff together
