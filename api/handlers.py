@@ -4,7 +4,7 @@ from meetings.models import Meeting, Presentor
 class MeetingHandler(BaseHandler):
   allowed_methods = ('GET',)
   model = Meeting
-  fields = ('when', 'which', ('venue', ('name',)), ('topic_set', ('title', 'description', 'length', 'start_time', ('presentor_set', ('name',)))))
+  fields = ('when', 'which', ('venue', ('name',)), ('topic_set', ('title', 'description', 'length', 'start_time', ('presentors', ('name',)))))
 
   def read(self, request, meeting_id=None):
     base = Meeting.objects
